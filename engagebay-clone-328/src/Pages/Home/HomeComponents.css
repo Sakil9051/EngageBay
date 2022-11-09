@@ -1,0 +1,79 @@
+#landing-video{
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  top:0;
+  left:0;
+  position: absolute;
+}
+#tab-video{
+  z-index: -1;
+  top:0;
+  left:0;
+  position: absolute;
+}
+
+/* Client Testimonials */
+
+#container_Client{
+                width:100%;
+                text-align: center;
+                height:500px;
+                background-color: rgb(238, 232, 232);
+            }
+
+            #main_Client{
+                width:60%;
+                text-align: center;
+                position: relative;
+                height:400px;
+                background-color: rgb(238, 232, 232);
+                margin: auto;
+            }
+
+            #crauser-title{
+                margin-bottom: 2px;
+                font-weight: 700;
+                font-size: 24px;
+                color: #1f1f1f;
+                line-height: 30px;
+                display: block;
+            }
+
+
+            #crauser-desin{
+                margin-bottom: 7px;
+                font-size: 15px;
+                color: #454545;
+                line-height: 30px;
+                font-style: italic
+            }
+            
+            #crauser-img{
+                margin-top:20px;
+                width: 20%;
+                border-radius: 50%;
+                margin-bottom: 4px;
+            }
+            #crauser-para{
+                font-weight: 300;
+                font-size: 20px;
+                color: #1f1f1f;
+                line-height: 33px;
+                font-style: italic;
+               
+            }
+.Partners{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+
+}
+
+@media screen and (max-width: 768px){
+    .Partners{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    
+    }
+}
