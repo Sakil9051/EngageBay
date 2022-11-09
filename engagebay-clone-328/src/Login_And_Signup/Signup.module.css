@@ -1,0 +1,103 @@
+body{
+    border: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.main_Container
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.signup_Container
+{
+    width: 33.5%;
+    height: 104vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_Content{
+    width: 85%;
+    height: 70%;
+    margin-top: -22%;
+}
+.logo{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+.img_Container
+{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    display: block!important;
+    width: 66.5%!important;
+    height: 100vh!important;
+    /* padding-right: 0!important;
+    padding-left: 0!important;
+    padding-top: 1.5rem!important;
+    padding-bottom: 1.5rem!important; */
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(135deg, #130CB7 10%, #52E5E7 100%);
+}
+
+.signup_img{
+    width: 100%;
+    height: 70%;
+    background-size: 65%;
+    background-position-x:center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-image: url(https://d2p078bqz5urf7.cloudfront.net/cloud/assets/img/login-image.svg);
+}
+
+.row_desc{
+    width: 80%;
+    height: 21vh;
+    margin-top: 2.3% ;
+    margin-left: 17%;
+    margin-bottom: 8%;
+    background-image: linear-gradient(135deg, #2856b7 10%, #339ad4 100%);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.desc_avatar{
+    width:13%;
+    height: 90%;
+}
+.desc_desc{
+    width: 82%;
+    height: 90%;
+    font-size: 14px;
+    font-family: 'Nunito Sans', sans-serif;
+    color:#fff
+}
+.desc{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-bottom: 0.5rem!important;
+}
+.writer{
+    text-align: right;
+}
+@media (max-width :990px) {
+    .img_Container{
+        display: none!important;
+    }
+    .signup_Container{
+        width: 100%;
+    }
+    
+}
