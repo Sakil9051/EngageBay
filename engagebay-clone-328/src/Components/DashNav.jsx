@@ -12,7 +12,7 @@ import {
   useDisclosure,
   Stack,
 } from "@chakra-ui/react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   ChevronDownIcon,
   SearchIcon,
@@ -122,7 +122,7 @@ function DashNavbar() {
                 // mt={"-9px"}
                 bgColor={"white"}
                 borderRadius={3}
-                zIndex={0}
+                zIndex={100}
                 // border={"1px solid #522a77"}
                 onMouseEnter={onOpenMarketing}
                 onMouseLeave={onCloseMarketing}
