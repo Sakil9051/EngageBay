@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Login.module.css";
-import logo from "../Images/Engagebay_Logo.png";
+import logo from "../../Images/Engagebay_Logo.png";
 import { FcGoogle } from "react-icons/fc";
 import {
   FormControl,
@@ -10,7 +10,12 @@ import {
   VStack,
   Box,
 } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
+  const navigate=useNavigate()
+  const handleGoToSignup=()=>{
+    navigate("/Signup")
+  }
   return (
     <div className={styles.main_Container}>
       <div className={styles.login_Container}>
@@ -63,7 +68,7 @@ const Login = () => {
             <p style={{marginTop:"17%",fontSize:"14px"}}>
               Forgot <span style={{cursor:"pointer"}} >Password</span>?
             </p>
-            <p style={{marginTop:"2%",fontSize:"14px"}}> Don't Have Any Account? <span style={{cursor:"pointer"}}>Sign Up</span></p>
+            <p style={{marginTop:"2%",fontSize:"14px"}}> Don't Have Any Account? <span onClick={handleGoToSignup} style={{cursor:"pointer"}}>Sign Up</span></p>
             <p style={{marginTop:"2%",fontSize:"14px",cursor:"pointer"}}>Private Policy</p>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Signup.module.css";
-import logo from "../Images/Engagebay_Logo.png";
+import logo from "../../Images/Engagebay_Logo.png";
 import { FcGoogle } from "react-icons/fc";
 import {
   FormControl,
