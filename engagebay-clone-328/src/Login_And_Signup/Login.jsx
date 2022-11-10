@@ -108,7 +108,7 @@ const Login = () => {
               {" "}
               I was using ActiveCampaign but the costs were adding up quite
               quickly. I tried other platforms but the automation sequence
-              offered by ActiveCampaign is not easy to find, until I got
+              offered by ActiveCampaign is not easy to find until I got
               Engagebay.
             </p>
             <p className={styles.writer}>
