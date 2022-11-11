@@ -9,11 +9,12 @@ import CreateOwnViews from "./CreateOwnViews.jsx";
 import ClinetTestimonial from "./ClinetTestimonial.jsx";
 import BoxHover from "./BoxHover.jsx";
 import GetStartedBox from "./GetStartedBox.jsx";
+import Navbar from "../../Components/Navbar";
 function Home() {
   return (
     <>
       <Box id="nav-container" w={"full"}>
-
+      <Navbar/>
       </Box>
       <Box w={"full"} overflow={"hidden"}>
         <VideoBackGround/>

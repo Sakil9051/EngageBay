@@ -1,0 +1,35 @@
+.Nav-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 65vw;
+
+}
+
+.menu{
+    color: #ef6333;
+    width: 30px;
+    font-size:xx-large;
+    cursor: pointer;
+    display: none;
+}
+
+.drawermanu{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    row-gap: 30px;
+}
+
+@media screen and (max-width:1100px) {
+    .Nav-right{
+        display: none;
+    }
+
+    .menu{
+        display:block;
+    }
+}
