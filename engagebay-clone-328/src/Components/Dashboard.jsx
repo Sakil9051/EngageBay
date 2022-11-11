@@ -56,8 +56,8 @@ function Dashboard() {
         </Flex>
         <Divider />
         <Grid mt={3} px={10} templateColumns="repeat(2, 1fr)" gap={5}>
-          <GridItem w="100%" h="460"  borderRadius={5} boxShadow='dark-lg' p='6' rounded='md' bg='white'>
-            
+          <GridItem w="100%" h="460"  borderRadius={5} boxShadow= "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" p='6' rounded='md' bg='white'>
+
           </GridItem>
           <GridItem w="100%" h="460" borderRadius={5} boxShadow='dark-lg' p='6' rounded='md' bg='white'></GridItem>
           <GridItem w="100%" h="460" borderRadius={5} boxShadow='dark-lg' p='6' rounded='md' bg='white'></GridItem>
