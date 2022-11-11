@@ -10,7 +10,11 @@ import { InlineFormContents } from "./Components/InlineFormContents";
 function App() {
   return (
     <div className="App">
+<<<<<<< HEAD
       
+=======
+
+>>>>>>> 45bc3c9556b58ae83a8325335807b3fb4f5cba25
     </div>
   );
 }

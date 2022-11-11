@@ -25,7 +25,9 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 
+
 import "./Footer.css";
+
 
 function Footer() {
   return (
@@ -38,10 +40,12 @@ function Footer() {
       backgroundAttachment={"fixed"}
       bgSize={"90%"}
     >
+
         <Image
         w={"full"}
         src="https://cdn5.engagebay.com/new/assets/img/patterns/wave.svg"
       />
+
       <Box w={"full"}>
         <Box className="footer-top" w={"90%"} padding={"2rem"}>
           <Image
