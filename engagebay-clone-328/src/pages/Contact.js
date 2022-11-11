@@ -1,9 +1,9 @@
-import { Box, Flex, Button, Image, Input, FormLabel, Select, VStack} from '@chakra-ui/react'
-import React, { useState } from 'react'
+import { Box, Flex, Button, Image, Input, FormLabel, Select, VStack, TableContainer, Table, Thead, Tr, Checkbox,Th} from '@chakra-ui/react'
+import React, { useState} from 'react'
 import {GrFormRefresh} from "react-icons/gr"
 import { ArrowDownIcon,CloseIcon} from '@chakra-ui/icons'
 import {TbTableImport} from "react-icons/tb"
-import {TiStar} from "react-icons/ti"
+
 
 export const Contact=()=> {
   const [name , setName] = useState('');
@@ -14,6 +14,7 @@ export const Contact=()=> {
   const [city,setCity] = useState('');
   const [state,setState] = useState('');
   const [xountry,setCountrty] = useState('');
+
 
 
   const handleChange =(e)=>{
@@ -40,20 +41,26 @@ export const Contact=()=> {
   const handleEmailChange =(e)=>{
     setEmail(e.target.value);
   }
+
   const handleSubmit=(e)=>{
-      alert('A form was submitted with Name :"' + name +
-      '" ,Age :"'+'" and Email :"' + email + '"'+xountry);
-    
+
     e.preventDefault();
+    alert("sTATUS : Conformed")
 
-  }
-
-
-  const styles = {
-    labelAsterisk: {
-      color: "red"
     }
-  };
+  // File upload
+
+
+
+
+
+
+  
+  // const styles = {
+  //   labelAsterisk: {
+  //     color: "red"
+  //   }
+  // };
   const [modal, setModal] = useState(false);
 
   const toggleModal = () => {
@@ -65,9 +72,11 @@ export const Contact=()=> {
   } else {
     document.body.classList.remove('active-modal')
   }
+
+
+
   return (
     <>
-        
     <Flex justifyContent="space-between"
         alignItems={"center"}
         py={4}
@@ -77,15 +86,35 @@ export const Contact=()=> {
             <h1>Contact{<ArrowDownIcon />}</h1>
         </Box>
         <div>
-        <Button>{<GrFormRefresh/>}</Button>
+        <Button onClick="Reset()">{<GrFormRefresh/>}</Button>
         <Button m="10px">{<TbTableImport />}</Button>
         <Button m="10px">Filter {<ArrowDownIcon />}</Button>
-        <Button m="10px">Create New</Button>
+        <Button m="10px" onClick={toggleModal}>Create New</Button>
         </div>
     </Flex>
+    <TableContainer>
+      <Table><Thead>
+        <Tr>
+          <Th>
+            <Checkbox>Name</Checkbox>
+          </Th>
+          <Th>Email</Th>
+          <Th>Role</Th>
+          <Th>Adress</Th>
+          <Th>Country</Th>
+          
+        </Tr>
+        <Tr>
+        <Th><Checkbox></Checkbox>{name}</Th>
+        <Th>{email}</Th>
+        <Th>{role}</Th>
+        <Th>{address}</Th>
+        <Th>{xountry}</Th>
+        </Tr>
+        </Thead></Table>
+    </TableContainer>
     {modal && (
         <VStack borderColor="black" border="1px" w="40%" ml="400px">
-          <div onClick={toggleModal} ></div>
           <form onSubmit={(e) => {handleSubmit(e)}}>
             <Flex justifyContent="space-between"><h1>Contact</h1>
             <Button  onClick={toggleModal}>{<CloseIcon/>}</Button>
@@ -122,10 +151,12 @@ export const Contact=()=> {
           <option>Russia</option>
           <option>USA</option>
          </Select>
-         <Button onClick={toggleModal}>Cancel</Button><Button type='submit'>Create</Button>
+         <Button onClick={toggleModal}>Cancel</Button>
+         <Button type='submit' >Create</Button>
           </form>
         </VStack>
       )}
+      
     
       <Flex justifyContent="space-between"
       maxW="container.lg"
@@ -143,4 +174,5 @@ export const Contact=()=> {
 
 
    </>
-  )}
+  )
+    }
