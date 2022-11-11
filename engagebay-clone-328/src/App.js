@@ -1,12 +1,11 @@
 
 import './App.css';
-import { Cdetail } from './pages/Cdetail';
-import { Contact } from './pages/Contact';
+import { LandingPage } from './Pages/LandingPage';
 
 function App() {
   return (
     <div className="App">
-      <Contact/>
+      <LandingPage/>
     </div>
   );
 }
