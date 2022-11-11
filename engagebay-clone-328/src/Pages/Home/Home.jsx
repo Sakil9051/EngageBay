@@ -1,23 +1,34 @@
 import React from "react";
 
-import './Home.css';
-import {Box} from "@chakra-ui/react";
+import "./Home.css";
+import { Box } from "@chakra-ui/react";
 import AvtivitySolution from "./AvtivitySolution";
-import VideoBackGround from "./VideoBackGround.jsx"
+import VideoBackGround from "./VideoBackGround.jsx";
+import ReviewsTab from "./ReviewsTab.jsx";
+import CreateOwnViews from "./CreateOwnViews.jsx";
+import ClinetTestimonial from "./ClinetTestimonial.jsx";
+import BoxHover from "./BoxHover.jsx";
+import GetStartedBox from "./GetStartedBox.jsx";
 import Navbar from "../../Components/Navbar";
+import Footer from "../../Components/Footer";
 function Home() {
   return (
     <>
       <Box id="nav-container" w={"full"}>
-        <Navbar/>
+        <Navbar />
       </Box>
       <Box w={"full"} overflow={"hidden"}>
-        <VideoBackGround/>
-        <AvtivitySolution/>
+        <VideoBackGround />
+        <AvtivitySolution />
+        <ReviewsTab />
+        <CreateOwnViews />
+        <ClinetTestimonial />
+        <BoxHover />
+        <GetStartedBox />
       </Box>
-      
+      <Footer />
     </>
   );
 }
 
-export default Home
+export default Home;

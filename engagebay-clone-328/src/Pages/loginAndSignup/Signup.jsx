@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Signup.module.css";
 import logo from "../Images/Engagebay_Logo.png";
 import { FcGoogle } from "react-icons/fc";
@@ -9,8 +9,28 @@ import {
   Button,
   VStack,
   Box,
+  Alert,
+  AlertIcon,
 } from "@chakra-ui/react";
+import { useUserAuth } from "../../Context/userAuthContext";
+
 const Signup = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const { signUp } = useUserAuth();
+  const handleSubmit = async () => {
+    // e.preventDefault();
+    setError("");
+    try {
+      await signUp(email, password);
+      alert("Signup Successfull");
+      // navigate to login page
+    } catch (err) {
+      setError(err.message);
+      // alert(err.message)
+    }
+  };
   return (
     <div className={styles.main_Container}>
       <div className={styles.signup_Container}>
@@ -22,34 +42,69 @@ const Signup = () => {
           <p
             style={{
               fontSize: "20px",
-              fontWeight:"100",
+              fontWeight: "100",
             }}
           >
             Get Started For FREE
           </p>
-          <br/>
-          <br/>
+          <br />
+          <br />
+          {error && (
+            <Alert status="error">
+              <AlertIcon />
+              {error}
+            </Alert>
+          )}
+
           <VStack>
             <FormControl isRequired>
               <FormLabel>Name</FormLabel>
-              <Input type="text" placeholder="Name" size="lg" focusBorderColor="blue.00" />
+              <Input
+                type="text"
+                placeholder="Name"
+                size="lg"
+                focusBorderColor="blue.00"
+              />
             </FormControl>
             <FormControl isRequired>
               <FormLabel>Username</FormLabel>
-              <Input type="username" placeholder="Work Email" size="lg" focusBorderColor="blue.00" />
+              <Input
+                type="email"
+                placeholder="Work Email"
+                size="lg"
+                focusBorderColor="blue.00"
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </FormControl>
             <FormControl isRequired>
               <FormLabel>Website URL</FormLabel>
-              <Input size="lg" type="email" placeholder="Website URL" focusBorderColor="blue.00" />
+              <Input
+                size="lg"
+                type="text"
+                placeholder="Website URL"
+                focusBorderColor="blue.00"
+              />
             </FormControl>
-            <FormControl isRequired>
+            <FormControl mb="10px" isRequired>
               <FormLabel>Password</FormLabel>
-              <Input size="lg" placeholder="Password" focusBorderColor="blue.00" />
+              <Input
+                size="lg"
+                type="password"
+                placeholder="Password"
+                focusBorderColor="blue.00"
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </FormControl>
-            <Button colorScheme="red" width="100%" size="lg">
-             SIGNUP
-            </Button>
           </VStack>
+          <Button
+            colorScheme="red"
+            width="100%"
+            size="lg"
+            mt={2}
+            onClick={handleSubmit}
+          >
+            SIGNUP
+          </Button>
           <div
             border="1px solid blue"
             style={{ display: "flex", boxSizing: "border-box", height: "60px" }}
@@ -68,12 +123,19 @@ const Signup = () => {
               SIGN IN WITH G SUIT
             </Box>
           </div>
+
           <div>
-            <p style={{marginTop:"10%",fontSize:"14px"}}>
-              Forgot <span style={{cursor:"pointer"}} >Password</span>?
+            <p style={{ marginTop: "10%", fontSize: "14px" }}>
+              Forgot <span style={{ cursor: "pointer" }}>Password</span>?
             </p>
-            <p style={{marginTop:"2%",fontSize:"14px"}}> Don't Have Any Account? <span style={{cursor:"pointer"}}>Sign Up</span></p>
-            <p style={{marginTop:"2%",fontSize:"14px",cursor:"pointer"}}>Private Policy</p>
+            <p style={{ marginTop: "2%", fontSize: "14px" }}>
+              {" "}
+              Don't Have Any Account?{" "}
+              <span style={{ cursor: "pointer" }}>Sign Up</span>
+            </p>
+            <p style={{ marginTop: "2%", fontSize: "14px", cursor: "pointer" }}>
+              Private Policy
+            </p>
           </div>
         </div>
       </div>

@@ -47,7 +47,8 @@
                 font-size: 15px;
                 color: #454545;
                 line-height: 30px;
-                font-style: italic
+                font-style: italic;
+                margin-top:"10px";
             }
             
             #crauser-img{
@@ -70,10 +71,49 @@
 
 }
 
+
+.plans{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.plans-content{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+        align-items: center;
+    gap: 2rem;
+}
+
 @media screen and (max-width: 768px){
     .Partners{
         display: grid;
         grid-template-columns: repeat(3,1fr);
     
+    }
+}
+@media screen and (max-width: 900px){
+    .plans{
+        display: grid;
+        grid-template-columns: repeat(2,2fr);
+    }
+    .plans-content{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+@media screen and (max-width: 350px){
+    .plans{
+        display: grid;
+        grid-template-columns: repeat(1,3fr);
+    }
+}
+@media screen and (max-width: 980px){
+    .planings-container-right-side-container{
+        display: none;
+        
     }
 }
