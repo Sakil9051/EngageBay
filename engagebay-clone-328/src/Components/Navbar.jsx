@@ -68,7 +68,7 @@ function Navbar() {
             h={"80px"}
             mt={-4}
             ml={-10}
-            src="https://i.ibb.co/PQSQZyc/Engagebay-1-a-clipdrop-enhance-clipdrop-enhance.png"
+            src="https://i.ibb.co/m4ChrbZ/Engagebay-1-a-clipdrop-enhance-clipdrop-enhance-removebg-preview.png"
             alt="Engagebay Logo"
           />
         </Link>

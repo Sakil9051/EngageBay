@@ -25,7 +25,8 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 
-import "./Footer.css"
+
+import "./Footer.css";
 
 
 function Footer() {
@@ -39,6 +40,12 @@ function Footer() {
       backgroundAttachment={"fixed"}
       bgSize={"90%"}
     >
+
+        <Image
+        w={"full"}
+        src="https://cdn5.engagebay.com/new/assets/img/patterns/wave.svg"
+      />
+
       <Box w={"full"}>
         <Box className="footer-top" w={"90%"} padding={"2rem"}>
           <Image
@@ -47,69 +54,74 @@ function Footer() {
           />
 
           <Box>
-                <Heading my={"10"} color={"white"}>
-                  Get Started
-                </Heading>
-                <Box className="footer-rigth">
-                <Input
-                  w={"xs"}
-                  bgColor={"rgb(0 0 0 / 20%)"}
-                  focusBorderColor="lime"
-                  placeholder="Name"
-                  border={"none"}
-                  color={"#FFFFFF"}
-                  h={"4xs"}
+            <Heading my={"10"} color={"white"}>
+              Get Started
+            </Heading>
+            <Box className="footer-rigth">
+              <Input
+                w={"xs"}
+                bgColor={"rgb(0 0 0 / 20%)"}
+                focusBorderColor="lime"
+                placeholder="Name"
+                border={"none"}
+                color={"#FFFFFF"}
+                h={"4xs"}
+                py={3}
+              />
+
+              <Input
+                w={"xs"}
+                focusBorderColor="lime"
+                placeholder="Website URL"
+                border={"none"}
+                color={"white"}
+                h={"4xs"}
+                py={3}
+                bgColor={"rgb(0 0 0 / 20%)"}
+              />
+
+              <Input
+                w={"xs"}
+                focusBorderColor="lime"
+                placeholder="Username"
+                border={"none"}
+                color={"white"}
+                h={"4xs"}
+                bgColor={"rgb(0 0 0 / 20%)"}
+                py={3}
+              />
+
+              <Input
+                w={"xs"}
+                focusBorderColor="lime"
+                placeholder="Password"
+                border={"none"}
+                opacity={1}
+                py={3}
+                h={"4xs"}
+                color={"white"}
+                bgColor={"rgb(0 0 0 / 20%)"}
+              />
+              <ButtonGroup
+                textAlign={"center"}
+                gap="4"
+                m={"auto"}
+                size={["sm", "md"]}
+              >
+                <Button h={"5xm"} px={8} py={3} colorScheme="orange">
+                  SIGNUP FOR FREE
+                </Button>
+                <Button
+                  h={"5xm"}
+                  px={8}
                   py={3}
-                />
-              
-                <Input
-                  w={"xs"}
-                  focusBorderColor="lime"
-                  placeholder="Website URL"
-                  border={"none"}
-                  color={"white"}
-                  h={"4xs"}
-                  py={3}
-                  bgColor={"rgb(0 0 0 / 20%)"}
-                />
-              
-                <Input
-                  w={"xs"}
-                  focusBorderColor="lime"
-                  placeholder="Username"
-                  border={"none"}
-                  color={"white"}
-                  h={"4xs"}
-                  bgColor={"rgb(0 0 0 / 20%)"}
-                  py={3}
-                />
-            
-                <Input
-                  w={"xs"}
-                  focusBorderColor="lime"
-                  placeholder="Password"
-                  border={"none"}
-                  opacity={1}
-                  py={3}
-                  h={"4xs"}
-                  color={"white"}
-                  bgColor={"rgb(0 0 0 / 20%)"}
-                />
-                <ButtonGroup textAlign={"center"} gap="4" m={"auto"} size={["sm",'md']}>
-                  <Button h={"5xm"} px={8} py={3} colorScheme="orange">
-                    SIGNUP FOR FREE
-                  </Button>
-                  <Button
-                    h={"5xm"}
-                    px={8}
-                    py={3}
-                    colorScheme="gray"
-                    color={"black"}
-                  >
-                    SCHEDULE A CALL
-                  </Button>
-                </ButtonGroup>
-                </Box>
+                  colorScheme="gray"
+                  color={"black"}
+                >
+                  SCHEDULE A CALL
+                </Button>
+              </ButtonGroup>
+            </Box>
           </Box>
         </Box>
       </Box>
@@ -210,22 +222,12 @@ function Footer() {
                 </Text>
                 <Flex direction={"row"}>
                   <ButtonGroup variant="ghost">
-                    <IconButton
-                      icon={<FaFacebook fontSize="1.25rem" />}
-                    />
-                    <IconButton
-                      icon={<FaLinkedin fontSize="1.25rem" />}
-                    />
-                    <IconButton
-                      icon={<FaTwitter fontSize="1.25rem" />}
-                    />
+                    <IconButton icon={<FaFacebook fontSize="1.25rem" />} />
+                    <IconButton icon={<FaLinkedin fontSize="1.25rem" />} />
+                    <IconButton icon={<FaTwitter fontSize="1.25rem" />} />
 
-                    <IconButton
-                      icon={<FaYoutube fontSize="1.25rem" />}
-                    />
-                    <IconButton
-                      icon={<FaInstagram fontSize="1.25rem" />}
-                    />
+                    <IconButton icon={<FaYoutube fontSize="1.25rem" />} />
+                    <IconButton icon={<FaInstagram fontSize="1.25rem" />} />
                   </ButtonGroup>
                   <HStack ml={3} fontSize={12}>
                     <Link href={"#"}>Legal</Link>
