@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Text, Image, Grid, GridItem, Heading, Box } from "@chakra-ui/react";
+import { Text, Image, Grid,SimpleGrid, GridItem, Heading, Box } from "@chakra-ui/react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -145,12 +145,13 @@ function BoxHover() {
         </Text>
       </Box>
       <Box w={"full"} m={"auto"} mt={10} pt={10}>
-        <Grid
+        <SimpleGrid
           m={"auto"}
           w={"90%"}
           mt={10}
-          templateColumns={"repeat(6, 1fr)"}
-          gap={6}
+          // gap={"10px"}
+          spacing={5}
+          columns={[2,3,4,6]}
         >
           {Data.map((ele) => (
             <div key={ele[1]} data-aos="fade-up" data-aos-easing="ease-in">
@@ -175,7 +176,7 @@ function BoxHover() {
               </GridItem>
             </div>
           ))}
-        </Grid>
+        </SimpleGrid>
       </Box>
     </Box>
   );

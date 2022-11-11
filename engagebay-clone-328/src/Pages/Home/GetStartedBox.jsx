@@ -26,13 +26,13 @@ function GetStartedBox() {
           All-In-One CRM software
         </Text>
         <InputGroup
-          size="lg"
           w={"50%"}
           m={"auto"}
           p={"2"}
           border={"2px solid tomato"}
           bg={"#FFFFFF"}
           borderRadius={"50px"}
+          size={["sm","md","lg"]}
         >
           <Input
             width="75%"
@@ -42,6 +42,7 @@ function GetStartedBox() {
             fontSize="lg"
             border={"none"}
             borderRadius={"50px"}
+            size={["xs","sm","md"]}
           />
           <Button
             width="25%"
@@ -49,8 +50,11 @@ function GetStartedBox() {
             bg={"tomato"}
             color={"white"}
             borderRadius={"50px"}
+            size={["xs","sm","md","lg"]}
+            overflow={"hidden"}
+            textOverflow="ellipsis"
           >
-            Get Started
+           Get Started
           </Button>
         </InputGroup>
 
