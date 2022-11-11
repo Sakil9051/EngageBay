@@ -3,6 +3,11 @@ import {ArrowBackIcon, ChevronDownIcon} from "@chakra-ui/icons";
 import {AiOutlineEdit, AiOutlineSetting} from "react-icons/ai";
 import {BiBrush, BiEdit, BiHeart} from "react-icons/bi";
 import {BsLayoutSplit} from "react-icons/bs";
+import { InlineThemes } from "./InlineThemes";
+import { InlineChangeText } from "./InlineChangeText";
+import { InlineLookAndFeel } from "./InlineLookAndFeel";
+import { InlineFeilds} from "./InlineFeilds";
+import {InlineSettings} from "./InlineSettings";
 
 
 export const InlineFormContents = ()=>{
@@ -40,23 +45,23 @@ export const InlineFormContents = ()=>{
 
                 <TabPanels>
                     <TabPanel>
-                        <Text>Themes!</Text>
+                        <InlineThemes />
                     </TabPanel>
 
                     <TabPanel>
-                        <Text>Change Text!</Text>
+                        <InlineChangeText />
                     </TabPanel>
 
                     <TabPanel>
-                        <Text>Look & Feel!</Text>
+                        <InlineLookAndFeel />
                     </TabPanel>
 
                     <TabPanel>
-                        <Text>Fields!</Text>
+                        <InlineFeilds />
                     </TabPanel>
 
                     <TabPanel>
-                        <Text>Settings!</Text>
+                        <InlineSettings />
                     </TabPanel>
                 </TabPanels>
             </Tabs>
