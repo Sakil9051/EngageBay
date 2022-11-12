@@ -119,11 +119,9 @@ function DashNavbar() {
               </MenuButton>
 
               <MenuList
-                // mt={"-9px"}
                 bgColor={"white"}
                 borderRadius={3}
                 zIndex={100}
-                // border={"1px solid #522a77"}
                 onMouseEnter={onOpenMarketing}
                 onMouseLeave={onCloseMarketing}
               >
