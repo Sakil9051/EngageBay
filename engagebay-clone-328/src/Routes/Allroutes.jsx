@@ -5,8 +5,6 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/loginAndSignup/Login"
 import Signup from '../Pages/loginAndSignup/Signup';
 import Resetpassword from "../Pages/loginAndSignup/Resetpassword";
-import Signup from "../Pages/loginAndSignup/Signup";
-
 const Allroutes = () => {
   return (
     <div>
