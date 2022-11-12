@@ -24,12 +24,16 @@ import {
   FaInstagram,
   FaLinkedin,
 } from "react-icons/fa";
-
+import { useNavigate } from "react-router-dom";
 
 import "./Footer.css";
 
-
 function Footer() {
+  const navigate = useNavigate();
+
+  const handlesignup = () => {
+    navigate("/signup");
+  };
   return (
     <Box
       w={"full"}
@@ -40,8 +44,7 @@ function Footer() {
       backgroundAttachment={"fixed"}
       bgSize={"90%"}
     >
-
-        <Image
+      <Image
         w={"full"}
         src="https://cdn5.engagebay.com/new/assets/img/patterns/wave.svg"
       />
@@ -108,9 +111,16 @@ function Footer() {
                 m={"auto"}
                 size={["sm", "md"]}
               >
-                <Button h={"5xm"} px={8} py={3} colorScheme="orange">
+                <Button
+                  onClick={handlesignup}
+                  h={"5xm"}
+                  px={8}
+                  py={3}
+                  colorScheme="orange"
+                >
                   SIGNUP FOR FREE
                 </Button>
+
                 <Button
                   h={"5xm"}
                   px={8}
@@ -212,11 +222,6 @@ function Footer() {
           <Box mt={"80px"} ml={2}>
             <Box className="footer-bottem" mt={4} gap={20}>
               <Stack spacing={6}>
-                {/* <Image
-                  w={"200px"}
-                  h={"30px"}
-                  src="https://cdn5.engagebay.com/new/assets/img/engagebay-logo-white.svg"
-                /> */}
                 <Text fontSize={"sm"}>
                   One platform for all your Marketing, Sales, and Support teams.
                 </Text>
