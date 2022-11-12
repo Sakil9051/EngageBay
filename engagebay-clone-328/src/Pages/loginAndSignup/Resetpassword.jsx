@@ -1,61 +1,45 @@
 import React, { useState } from "react";
-import styles from "./Signup.module.css";
+import styles from "./Resetpassword.module.css";
 import logo from "../Images/Engagebay_Logo.png";
-import { FcGoogle } from "react-icons/fc";
 import {
   FormControl,
   FormLabel,
   Input,
   Button,
   VStack,
-  Box,
   Alert,
   AlertIcon,
 } from "@chakra-ui/react";
 import { useUserAuth } from "../../Context/userAuthContext";
-
-const Signup = () => {
+const Resetpassword = () => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { signUp,googleSignin } = useUserAuth();
+  const { resetPassword } = useUserAuth();
   const handleSubmit = async () => {
-    // e.preventDefault();
     setError("");
     try {
-      await signUp(email, password);
-      alert("Signup Successfull");
-      // navigate to login page
+      await resetPassword(email);
+      alert("password sent");
     } catch (err) {
       setError(err.message);
-      // alert(err.message)
     }
   };
-  const handlegoogleSignup=async()=>{
-    try {
-      await googleSignin();
-      alert("Login  Succesfully!");
-      // navigate to dash board
-    } catch (err) {
-      setError(err.message);
-      alert("Log In With Google Failed");
-    }
-  }
   return (
     <div className={styles.main_Container}>
-      <div className={styles.signup_Container}>
+      <div className={styles.reset_Container}>
         <div className={styles.main_Content}>
           <div className={styles.logo}>
             <img src={logo} alt="logo" width={250} />
           </div>
-          {/* <br/> */}
+
           <p
             style={{
-              fontSize: "20px",
-              fontWeight: "100",
+              fontSize: "28px",
+              fontWeight: "normal",
+              marginTop: "20px",
             }}
           >
-            Get Started For FREE
+            Reset Password
           </p>
           <br />
           <br />
@@ -65,44 +49,14 @@ const Signup = () => {
               {error}
             </Alert>
           )}
-
           <VStack>
-            <FormControl isRequired>
-              <FormLabel>Name</FormLabel>
-              <Input
-                type="text"
-                placeholder="Name"
-                size="lg"
-                focusBorderColor="blue.00"
-              />
-            </FormControl>
             <FormControl isRequired>
               <FormLabel>Username</FormLabel>
               <Input
                 type="email"
-                placeholder="Work Email"
                 size="lg"
                 focusBorderColor="blue.00"
                 onChange={(e) => setEmail(e.target.value)}
-              />
-            </FormControl>
-            <FormControl isRequired>
-              <FormLabel>Website URL</FormLabel>
-              <Input
-                size="lg"
-                type="text"
-                placeholder="Website URL"
-                focusBorderColor="blue.00"
-              />
-            </FormControl>
-            <FormControl mb="10px" isRequired>
-              <FormLabel>Password</FormLabel>
-              <Input
-                size="lg"
-                type="password"
-                placeholder="Password"
-                focusBorderColor="blue.00"
-                onChange={(e) => setPassword(e.target.value)}
               />
             </FormControl>
           </VStack>
@@ -113,38 +67,17 @@ const Signup = () => {
             mt={2}
             onClick={handleSubmit}
           >
-            SIGNUP
+            Reset Password
           </Button>
-          <div
-            border="1px solid blue"
-            style={{ display: "flex", boxSizing: "border-box", height: "60px" }}
-          >
-            <Box
-              bg="white.600"
-              w="15%"
-              mt="10px"
-              border="1px solid blue"
-              p={2}
-              color="black"
-            >
-              <FcGoogle size="sm" />
-            </Box>
-            <Box bg="blue.600" w="85%" mt="10px" p={3.5} color="white" onClick={handlegoogleSignup}>
-              SIGN IN WITH G SUIT
-            </Box>
-          </div>
-
           <div>
-            <p style={{ marginTop: "10%", fontSize: "14px" }}>
-              Forgot <span style={{ cursor: "pointer" }}>Password</span>?
+            <p style={{ marginTop: "17%", fontSize: "14px" }}>
+              Already have an account ?{" "}
+              <span style={{ cursor: "pointer" }}>Sign In</span>
             </p>
             <p style={{ marginTop: "2%", fontSize: "14px" }}>
               {" "}
               Don't Have Any Account?{" "}
               <span style={{ cursor: "pointer" }}>Sign Up</span>
-            </p>
-            <p style={{ marginTop: "2%", fontSize: "14px", cursor: "pointer" }}>
-              Private Policy
             </p>
           </div>
         </div>
@@ -189,7 +122,7 @@ const Signup = () => {
               {" "}
               I was using ActiveCampaign but the costs were adding up quite
               quickly. I tried other platforms but the automation sequence
-              offered by ActiveCampaign is not easy to find, until I got
+              offered by ActiveCampaign is not easy to find until I got
               Engagebay.
             </p>
             <p className={styles.writer}>
@@ -197,10 +130,10 @@ const Signup = () => {
             </p>
           </div>
         </div>
-        <div className={styles.signup_img}></div>
+        <div className={styles.reset_img}></div>
       </div>
     </div>
   );
 };
 
-export default Signup;
+export default Resetpassword;
