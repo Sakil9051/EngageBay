@@ -1,10 +1,12 @@
 import React from "react";
+import DashNavbar from "../../Components/DashNav";
 import styles from "../Templetes/Vedio.module.css";
 import  VideoDrawer  from "./Drawer";
 import RecordVideo from "./Modal";
 const Vediotemplete = () => {
   return (
     <>
+    <DashNavbar/>
       <div className={styles.main_Container}>Video</div>
       <div className={styles.inner_Container}>
         <div

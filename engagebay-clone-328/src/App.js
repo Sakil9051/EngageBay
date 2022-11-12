@@ -8,14 +8,14 @@ import VideoBackGround from "./Pages/Home/VideoBackGround";
 import Dashboard from "./Components/Dashboard";
 import { InlineForm } from "./Pages/InlineForm/InlineForm";
 import { PopupForm } from "./Pages/PopupForm/PopupForm";
+import Allroutes from "./Routes/Allroutes";
 
 function App() {
   return (
     <div className="App">
 
    
-      
-
+      <Allroutes/>
     </div>
   );
 }
