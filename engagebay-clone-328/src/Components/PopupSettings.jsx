@@ -4,7 +4,7 @@ import {TbMailForward} from "react-icons/tb";
 import {RiFileListLine} from "react-icons/ri";
 import { useState } from "react";
 
-export const InlineSettings = ()=>{
+export const PopupSettings = ()=>{
     const [value, setValue] = useState(1);
 
     return (
