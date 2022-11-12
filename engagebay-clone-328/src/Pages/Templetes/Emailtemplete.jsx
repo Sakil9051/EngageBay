@@ -1,9 +1,11 @@
 import { Button } from "@chakra-ui/react";
 import React from "react";
+import DashNavbar from "../../Components/DashNav";
 import styles from "../Templetes/Vedio.module.css";
 const Emailtemplete = () => {
   return (
     <>
+    <DashNavbar/>
       <div className={styles.main_Container}>Email</div>
       <div className={styles.inner_Container}>
         <div

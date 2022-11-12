@@ -13,12 +13,24 @@ import {
   AlertIcon,
 } from "@chakra-ui/react";
 import { useUserAuth } from "../../Context/userAuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const { signUp,googleSignin } = useUserAuth();
+
+  const navigate = useNavigate()
+
+  const handleForgetpw = ()=>{
+    navigate('/forgetpassword')
+  }
+
+  const home = ()=>{
+    navigate('/')
+  }
+
   const handleSubmit = async () => {
     // e.preventDefault();
     setError("");
@@ -26,6 +38,7 @@ const Signup = () => {
       await signUp(email, password);
       alert("Signup Successfull");
       // navigate to login page
+      navigate("/login");
     } catch (err) {
       setError(err.message);
       // alert(err.message)
@@ -36,6 +49,7 @@ const Signup = () => {
       await googleSignin();
       alert("Login  Succesfully!");
       // navigate to dash board
+      navigate("/dashboard");
     } catch (err) {
       setError(err.message);
       alert("Log In With Google Failed");
@@ -46,7 +60,7 @@ const Signup = () => {
       <div className={styles.signup_Container}>
         <div className={styles.main_Content}>
           <div className={styles.logo}>
-            <img src={logo} alt="logo" width={250} />
+            <img onClick={home} src={logo} alt="logo" width={250} />
           </div>
           {/* <br/> */}
           <p
@@ -136,7 +150,7 @@ const Signup = () => {
 
           <div>
             <p style={{ marginTop: "10%", fontSize: "14px" }}>
-              Forgot <span style={{ cursor: "pointer" }}>Password</span>?
+              Forgot <span onClick={handleForgetpw} style={{ cursor: "pointer" }}>Password</span>?
             </p>
             <p style={{ marginTop: "2%", fontSize: "14px" }}>
               {" "}

@@ -11,6 +11,12 @@ import {
   AlertIcon,
 } from "@chakra-ui/react";
 import { useUserAuth } from "../../Context/userAuthContext";
+import { useNavigate } from "react-router-dom";
+
+
+
+
+
 const Resetpassword = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
@@ -24,12 +30,25 @@ const Resetpassword = () => {
       setError(err.message);
     }
   };
+
+  
+  const navigate = useNavigate()
+
+  const handlesignin =()=>{
+    navigate('/login')
+  }
+  const handlesignup =()=>{
+    navigate('/signup')
+  }
+  const home = ()=>{
+    navigate('/')
+  }
   return (
     <div className={styles.main_Container}>
       <div className={styles.reset_Container}>
         <div className={styles.main_Content}>
           <div className={styles.logo}>
-            <img src={logo} alt="logo" width={250} />
+            <img onClick={home} src={logo} alt="logo" width={250} />
           </div>
 
           <p
@@ -72,12 +91,12 @@ const Resetpassword = () => {
           <div>
             <p style={{ marginTop: "17%", fontSize: "14px" }}>
               Already have an account ?{" "}
-              <span style={{ cursor: "pointer" }}>Sign In</span>
+              <span onClick={handlesignin} style={{ cursor: "pointer" }}>Sign In</span>
             </p>
             <p style={{ marginTop: "2%", fontSize: "14px" }}>
               {" "}
               Don't Have Any Account?{" "}
-              <span style={{ cursor: "pointer" }}>Sign Up</span>
+              <span onClick={handlesignup} style={{ cursor: "pointer" }}>Sign Up</span>
             </p>
           </div>
         </div>

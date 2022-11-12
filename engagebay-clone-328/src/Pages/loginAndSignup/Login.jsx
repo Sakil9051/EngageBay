@@ -13,25 +13,44 @@ import {
   AlertIcon,
 } from "@chakra-ui/react";
 import { useUserAuth } from "../../Context/userAuthContext";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const { logIn, googleSignin } = useUserAuth();
+
+  const navigate = useNavigate()
+
   const handleSubmit = async () => {
     setError("");
     try {
       await logIn(email, password);
       alert("Login Successfull");
+      navigate("/dashboard");
     } catch (err) {
       setError(err.message);
     }
   };
+
+  const handleForgetpw = ()=>{
+    navigate('/forgetpassword')
+  }
+
+  const handlesignup = ()=>{
+    navigate('/signup')
+  }
+
+  const home = ()=>{
+    navigate('/')
+  }
+  
   const handleGooleSignIn = async () => {
     try {
       await googleSignin();
       alert("Login  Succesfully!");
       // navigate to dash board
+      navigate("/dashboard");
     } catch (err) {
       setError(err.message);
       alert("Log In With Google Failed");
@@ -42,7 +61,7 @@ const Login = () => {
       <div className={styles.login_Container}>
         <div className={styles.main_Content}>
           <div className={styles.logo}>
-            <img src={logo} alt="logo" width={250} />
+            <img onClick={home} src={logo} alt="logo" width={250} />
           </div>
           {/* <br/> */}
           <p
@@ -109,13 +128,13 @@ const Login = () => {
             </Box>
           </div>
           <div>
-            <p style={{ marginTop: "17%", fontSize: "14px" }}>
-              Forgot <span style={{ cursor: "pointer" }}>Password</span>?
+            <p  style={{ marginTop: "17%", fontSize: "14px" }}>
+              Forgot <span onClick={handleForgetpw} style={{ cursor: "pointer" }}>Password</span>?
             </p>
             <p style={{ marginTop: "2%", fontSize: "14px" }}>
               {" "}
               Don't Have Any Account?{" "}
-              <span style={{ cursor: "pointer" }}>Sign Up</span>
+              <span onClick={handlesignup} style={{ cursor: "pointer" }}>Sign Up</span>
             </p>
             <p style={{ marginTop: "2%", fontSize: "14px", cursor: "pointer" }}>
               Private Policy

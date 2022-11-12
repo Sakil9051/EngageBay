@@ -12,13 +12,16 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
+  SimpleGrid,
   Text,
 } from "@chakra-ui/react";
 import React from "react";
+import DashNavbar from "./DashNav";
 
 function Dashboard() {
   return (
     <div>
+      <DashNavbar/>
       <Box>
         <Flex py={"10px"} px={"25px"} justify={"space-between"}>
           <Menu>
@@ -57,8 +60,8 @@ function Dashboard() {
             </MenuList>
           </Menu>
         </Flex>
-        <Divider />
-        <Grid mt={3} px={10} templateColumns="repeat(2, 1fr)" gap={5}>
+        {/* <Divider /> */}
+        <SimpleGrid mt={3} px={10} columns={[1, null, 2]}  gap={5}>
           <GridItem
             w="100%"
             h="460"
@@ -505,7 +508,7 @@ function Dashboard() {
               
             </Box>
           </GridItem>
-        </Grid>
+        </SimpleGrid>
       </Box>
     </div>
   );
