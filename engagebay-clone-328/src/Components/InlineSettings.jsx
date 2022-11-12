@@ -1,4 +1,4 @@
-import { Box, Checkbox, CheckboxGroup, Editable, EditableInput, EditablePreview, Flex, Heading, Icon, Input, Radio, RadioGroup, Select, Stack, Switch, Text } from "@chakra-ui/react"
+import { Box, Checkbox,  Editable, EditableInput, EditablePreview, Flex, Heading, Icon, Input, Radio, RadioGroup, Select, Stack, Switch, Text } from "@chakra-ui/react"
 import {AiOutlineMail} from "react-icons/ai";
 import {TbMailForward} from "react-icons/tb";
 import {RiFileListLine} from "react-icons/ri";
@@ -8,12 +8,14 @@ export const InlineSettings = ()=>{
     const [value, setValue] = useState(1);
 
     return (
-        <Flex gap="20px">
+        <Flex gap="20px"
+        direction={{base:"column", lg:"row"}}
+        >
             <Stack 
             border="1px dashed gray" 
             borderRadius="10px"
             padding="20px"
-            w="30%"
+            w={{base:"100%", lg:"30%"}}
             shadow="lg"
             >
                 <Flex
@@ -66,7 +68,7 @@ export const InlineSettings = ()=>{
 
 
             <Stack 
-            width="70%"
+            width={{base:"100%", lg:"70%"}}
             border="1px dashed gray"
             borderRadius="10px"
             padding="20px"

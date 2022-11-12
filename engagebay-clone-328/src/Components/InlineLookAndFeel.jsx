@@ -3,8 +3,11 @@ import {BsLightningChargeFill} from "react-icons/bs";
 
 export const InlineLookAndFeel = ()=>{
     return (
-        <Flex gap="20px">
-            <Stack w="40%"  
+        <Flex 
+        gap="20px"
+        direction={{base:"column", lg:"row"}}
+        >
+            <Stack w={{base:"100%", lg:"40%"}}  
             border="1px dashed gray"
             borderRadius="10px"
             p="20px"
@@ -106,7 +109,7 @@ export const InlineLookAndFeel = ()=>{
 
 
             <Box 
-            w="60%" py="30px" px="12%"                     
+            w={{base:"100%", lg:"60%"}} py="30px" px="12%"                     
             bgColor="blackAlpha.100"
             borderRadius="10px"
             

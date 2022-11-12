@@ -8,12 +8,14 @@ export const PopupSettings = ()=>{
     const [value, setValue] = useState(1);
 
     return (
-        <Flex gap="20px">
+        <Flex gap="20px"
+        direction={{base:"column", lg:"row"}}
+        >
             <Stack 
             border="1px dashed gray" 
             borderRadius="10px"
             padding="20px"
-            w="30%"
+            w={{base:"100%", lg:"30%"}}
             shadow="lg"
             >
                 <Flex
@@ -66,7 +68,7 @@ export const PopupSettings = ()=>{
 
 
             <Stack 
-            width="70%"
+            width={{base:"100%", lg:"70%"}}
             border="1px dashed gray"
             borderRadius="10px"
             padding="20px"

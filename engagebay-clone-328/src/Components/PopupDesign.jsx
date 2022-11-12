@@ -3,8 +3,10 @@ import {BsLightningChargeFill} from "react-icons/bs";
 
 export const PopupDesign = ()=>{
     return (
-        <Flex gap="20px">
-            <Stack w="40%"  
+        <Flex gap="20px"
+        direction={{base:"column", lg:"row"}}
+        >
+            <Stack w={{base:"100%", lg:"40%" }} 
             border="1px dashed gray"
             borderRadius="10px"
             p="20px"
@@ -106,7 +108,8 @@ export const PopupDesign = ()=>{
 
 
             <Box 
-            w="60%" py="30px" px="12%"                     
+            w={{base:"100%", lg:"60%"}} 
+            py="30px" px="12%"                     
             bgColor="blackAlpha.100"
             borderRadius="10px"
             
@@ -120,9 +123,9 @@ export const PopupDesign = ()=>{
                 textAlign="left"
                 spacing="10px"
                 bgColor="white"
-                bgImage={"https://s3.amazonaws.com/board-uploads/uploads/1523345017920-greenCurl.png"}
+                bgImage={"https://s3.amazonaws.com/board-uploads/uploads/1523349187250-form4_border.png "}
                 bgRepeat="no-repeat"
-                bgSize="30px contain"
+                bgSize="100% 100%"
                 bgPosition="right top"
                 >
                     <Heading 
