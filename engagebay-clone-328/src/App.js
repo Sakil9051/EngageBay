@@ -6,9 +6,15 @@ import DashNavbar from "./Components/DashNav";
 import Home from "./Pages/Home/Home.jsx";
 import VideoBackGround from "./Pages/Home/VideoBackGround";
 import Dashboard from "./Components/Dashboard";
+import { InlineFormContents } from "./Components/InlineFormContents";
 function App() {
   return (
     <div className="App">
+
+    
+
+      
+
     </div>
   );
 }

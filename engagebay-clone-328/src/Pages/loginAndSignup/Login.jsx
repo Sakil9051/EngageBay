@@ -38,6 +38,16 @@ const Login = () => {
     }
   };
   return (
+    <>
+    <div>
+
+      {error && (
+        <Alert status="error">
+          <AlertIcon />
+          {error}
+        </Alert>
+      )}
+    </div>
     <div className={styles.main_Container}>
       <div className={styles.login_Container}>
         <div className={styles.main_Content}>
@@ -54,12 +64,6 @@ const Login = () => {
           >
             Login
           </p>
-          {error && (
-            <Alert status="error">
-              <AlertIcon />
-              {error}
-            </Alert>
-          )}
           <VStack>
             <FormControl isRequired>
               <FormLabel>Username</FormLabel>
@@ -174,6 +178,7 @@ const Login = () => {
         <div className={styles.login_img}></div>
       </div>
     </div>
+    </>
   );
 };
 
