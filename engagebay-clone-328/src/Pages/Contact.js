@@ -63,7 +63,7 @@ export const Contact=()=> {
     setShow(false);
     alert("Stats: Confirmed")
     console.log(tabledata)
-
+    toggleModal()
     }
   // File upload
 
@@ -187,13 +187,13 @@ export const Contact=()=> {
           <option>USA</option>
          </Select>
          <Button onClick={toggleModal}>Cancel</Button>
-         <Button type='submit' >Create</Button>
+         <Button  type='submit' >Create</Button>
           </form>
         </VStack>
       )}
       
     
-      {show?<Flex bg="blue.200" justifyContent="space-between"
+      {show?<Flex bg="rgb(246, 250, 253)" justifyContent="space-between"
       maxW="container.lg"
       mx="auto"
       alignItems={"center"}
@@ -202,7 +202,7 @@ export const Contact=()=> {
         <Box>
           <h1>Contact</h1><br/>
           <p>Sorry, we could not find any results with the search criteria. Please change the search criteria and try again.</p>
-          <Button bg="blue.400">Import</Button>
+          <Button bg="rgb(47, 106, 217)" color={"white"}>Import</Button>
        <Button  ml="10px" onClick={toggleModal}>Create New</Button>
         </Box>
       </Flex>:null}
