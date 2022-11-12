@@ -4,17 +4,10 @@ import { ArrowBackIcon} from '@chakra-ui/icons'
 import {BiBrush} from "react-icons/bi"
 import {BsCodeSlash} from "react-icons/bs"
 import { Grid } from '@chakra-ui/react'
+import DashNavbar from '../Components/DashNav'
 
 
 export const LandingPage = () => {
-
-
-  
-
-
-
-
-
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [modal, setModal] = useState(false);
 
@@ -30,6 +23,7 @@ export const LandingPage = () => {
   
   return (
    <>
+   <DashNavbar/>
     {modal &&(
         <>
         <Flex mb="4px" >

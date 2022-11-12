@@ -11,11 +11,14 @@ import { PopupForm } from "../Pages/PopupForm/PopupForm";
 import Emailtemplete from "../Pages/Templetes/Emailtemplete";
 import Vediotemplete from "../Pages/Templetes/Vediotemplete";
 import ProtectedRoute from "./ProtectedRoute";
+import { Contact } from "../Pages/Contact";
+import {LandingPage } from "../Pages/LandingPage";
+
 const Allroutes = () => {
   return (
     <div>
       <UserAuthContextProvider>
-        <Routes>
+        <Routes> 
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
@@ -57,6 +60,22 @@ const Allroutes = () => {
             element={
               <ProtectedRoute>
                 <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <ProtectedRoute>
+                <Contact />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/landing"
+            element={
+              <ProtectedRoute>
+                <LandingPage />
               </ProtectedRoute>
             }
           />

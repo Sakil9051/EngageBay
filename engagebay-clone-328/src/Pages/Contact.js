@@ -4,6 +4,7 @@ import {GrFormRefresh} from "react-icons/gr"
 import { ArrowDownIcon,CloseIcon} from '@chakra-ui/icons'
 import {TbTableImport} from "react-icons/tb"
 import "./coantact.css"
+import DashNavbar from '../Components/DashNav'
 
 
 export const Contact=()=> {
@@ -93,6 +94,7 @@ export const Contact=()=> {
 
   return (
     <>
+    <DashNavbar/>
     <Flex justifyContent="space-between"
         alignItems={"center"}
         py={4}

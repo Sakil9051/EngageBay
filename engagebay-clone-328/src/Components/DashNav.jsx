@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import {
   Box,
   Flex,
@@ -56,6 +57,12 @@ function DashNavbar() {
   }
   const popup = ()=>{
     navigate ('/popupform')
+  }
+  const contact = ()=>{
+    navigate ('/contact')
+  }
+  const landingpage = ()=>{
+    navigate ('/landing')
   }
 
   const handleLogout =()=>{
@@ -189,7 +196,7 @@ function DashNavbar() {
                   onMouseEnter={onOpenContacts}
                   onMouseLeave={onCloseContacts}
                 >
-                  <MenuItem color={"black"} _hover={{ bgColor: "lightgrey" }}>
+                  <MenuItem color={"black"} onClick={contact} _hover={{ bgColor: "lightgrey" }}>
                     Contacts
                   </MenuItem>
                   <MenuItem color={"black"} _hover={{ bgColor: "lightgrey" }}>
@@ -237,6 +244,7 @@ function DashNavbar() {
                 _hover={{ bgColor: "lightgrey", color: "blue" }}
                 color={"black"}
                 fontWeight={"500"}
+                onClick={landingpage}
               >
                 Landing Pages
               </Text>
