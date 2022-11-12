@@ -3,6 +3,7 @@ import React, { useState} from 'react'
 import {GrFormRefresh} from "react-icons/gr"
 import { ArrowDownIcon,CloseIcon} from '@chakra-ui/icons'
 import {TbTableImport} from "react-icons/tb"
+import "./coantact.css"
 
 
 export const Contact=()=> {
@@ -15,7 +16,9 @@ export const Contact=()=> {
   const [state,setState] = useState('');
   const [xountry,setCountrty] = useState('');
 
-
+  const [tabledata,setTabledata]=useState([]);
+  const [show,setShow]=useState(true);
+  
 
   const handleChange =(e)=>{
     setName(e.target.value);
@@ -45,7 +48,20 @@ export const Contact=()=> {
   const handleSubmit=(e)=>{
 
     e.preventDefault();
-    alert("sTATUS : Conformed")
+    let data={
+      name:name,
+      last:lname,
+      address:address,
+      email:email,
+      country:xountry,
+      role:role,
+      id:new Date()
+    }
+    
+    setTabledata([...tabledata,data])
+    setShow(false);
+    alert("Stats: Confirmed")
+    console.log(tabledata)
 
     }
   // File upload
@@ -92,29 +108,46 @@ export const Contact=()=> {
         <Button m="10px" onClick={toggleModal}>Create New</Button>
         </div>
     </Flex>
-    <TableContainer>
-      <Table><Thead>
-        <Tr>
-          <Th>
-            <Checkbox>Name</Checkbox>
-          </Th>
-          <Th>Email</Th>
-          <Th>Role</Th>
-          <Th>Adress</Th>
-          <Th>Country</Th>
-          
-        </Tr>
-        <Tr>
-        <Th><Checkbox></Checkbox>{name}</Th>
-        <Th>{email}</Th>
-        <Th>{role}</Th>
-        <Th>{address}</Th>
-        <Th>{xountry}</Th>
-        </Tr>
-        </Thead></Table>
-    </TableContainer>
+
+
+
+
+
+
+  <TableContainer>
+    <Table><Thead>
+      <Tr>
+        <Th>
+          <Checkbox>Name</Checkbox>
+        </Th>
+        <Th>Email</Th>
+        <Th>Role</Th>
+        <Th>Adress</Th>
+        <Th>Country</Th>
+        
+      </Tr>
+     {tabledata.map(el=>{
+      return (
+        <Tr key={el.id}>
+      <Th><Checkbox></Checkbox>{el.name}</Th>
+      <Th>{el.email}</Th>
+      <Th>{el.role}</Th>
+      <Th>{el.address}</Th>
+      <Th>{el.country}</Th>
+      </Tr>
+      )
+     }) 
+}
+      </Thead></Table>
+  </TableContainer>
+
+
+
+
+
+
     {modal && (
-        <VStack borderColor="black" border="1px" w="40%" ml="400px">
+        <VStack className='modal1'  w={{ base: '100%', md: '30%', lg: '50%' }} ml={{ base: '24px', md: '300px', lg: '300px' }} borderRadius="2px">
           <form onSubmit={(e) => {handleSubmit(e)}}>
             <Flex justifyContent="space-between"><h1>Contact</h1>
             <Button  onClick={toggleModal}>{<CloseIcon/>}</Button>
@@ -158,7 +191,7 @@ export const Contact=()=> {
       )}
       
     
-      <Flex justifyContent="space-between"
+      {show?<Flex bg="blue.200" justifyContent="space-between"
       maxW="container.lg"
       mx="auto"
       alignItems={"center"}
@@ -167,10 +200,10 @@ export const Contact=()=> {
         <Box>
           <h1>Contact</h1><br/>
           <p>Sorry, we could not find any results with the search criteria. Please change the search criteria and try again.</p>
-          <Button >Import</Button>
-       <Button onClick={toggleModal}>Create New</Button>
+          <Button bg="blue.400">Import</Button>
+       <Button  ml="10px" onClick={toggleModal}>Create New</Button>
         </Box>
-      </Flex>
+      </Flex>:null}
 
 
    </>
