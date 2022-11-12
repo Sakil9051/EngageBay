@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react"
-import React from "react"
+import React, { useState } from "react"
 import { CreateForm } from "../../Components/CreateForm";
 import { InlineFormContents } from "../../Components/InlineFormContents"
 
@@ -10,11 +10,24 @@ const form_content = {
     btn_txt : "Create Inline Form"
 }
 
-export const InlineFormCreate = ()=>{
+export const InlineForm = ()=>{
+    const [show, setShow] = useState(true);
+
+    const handleShowCreate = ()=>{
+        setShow(false);
+    }
+
+    const handleShowContents = ()=>{
+        setShow(true);
+    }
     return (
         <Box>
-            {/* <CreateForm {...form_content} /> */}
-            <InlineFormContents />
+            {
+                (show)
+                ?<CreateForm handleShow={handleShowCreate}  {...form_content} />
+                :<InlineFormContents handleShow={handleShowContents} />
+            }
+            {/* <InlineFormContents /> */}
         </Box>
     )
 }

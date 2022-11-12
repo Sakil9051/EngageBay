@@ -1,9 +1,12 @@
 import { Box, Button, Center, Flex, Heading, Image, Stack, Text } from "@chakra-ui/react"
+import { useState } from "react";
 
 
 export const CreateForm = (props)=>{
-    const {image_url, form_name, description, btn_txt} = props;
-    // console.log(image_url);
+    const {image_url, form_name, description, btn_txt, handleShow} = props;
+
+   
+    
     return (
         <Box bgColor="white" p="20px" borderColor="black">
             <Center bgColor="#F6FAFD" borderRadius={10} padding={8}>
@@ -24,6 +27,7 @@ export const CreateForm = (props)=>{
                         >{description}</Text>
                         <Button colorScheme="blue"
                         width="fit-content"
+                        onClick={handleShow}
                         >{btn_txt}</Button>
                     </Stack>
                 </Flex>

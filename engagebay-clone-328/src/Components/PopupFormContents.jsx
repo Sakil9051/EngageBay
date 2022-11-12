@@ -3,14 +3,14 @@ import {ArrowBackIcon, ChevronDownIcon} from "@chakra-ui/icons";
 import {AiOutlineEdit, AiOutlineSetting} from "react-icons/ai";
 import {BiBrush, BiEdit, BiHeart} from "react-icons/bi";
 import {BsLayoutSplit} from "react-icons/bs";
-import { InlineThemes } from "./InlineThemes";
-import { InlineChangeText } from "./InlineChangeText";
-import { InlineLookAndFeel } from "./InlineLookAndFeel";
-import { InlineFeilds} from "./InlineFeilds";
-import {InlineSettings} from "./InlineSettings";
+import { PopupThemes } from "./PopupThemes";
+import { PopupSettings } from "./PopupSettings";
+import { PopupDesign } from "./PopupDesign";
+import { PopupCallToAction } from "./PopupCallToAction";
+import { PopupStyle } from "./PopupStyle";
 
 
-export const InlineFormContents = ({handleShow})=>{
+export const PopupFormContents = ({handleShow})=>{
     return(
      <Box bgColor="blue.50">
         <Flex padding={5} bgColor="white">
@@ -36,32 +36,32 @@ export const InlineFormContents = ({handleShow})=>{
         <Box w="98%" m="auto" mt="4" borderRadius="10px" p="5" bgColor="white">
             <Tabs  variant="soft-rounded" colorScheme="telegram">
                 <TabList>
+                    <Tab><Icon as={BiHeart} mr="4px"/> Style</Tab>
+                    <Tab><Icon as={BiEdit} mr="4px"/> Call to Action</Tab>
                     <Tab> <Icon as={BiBrush} mr="4px"/> Themes</Tab>
-                    <Tab><Icon as={BiEdit} mr="4px"/> Change Text</Tab>
-                    <Tab><Icon as={BiHeart} mr="4px"/> Look & Feel</Tab>
-                    <Tab><Icon as={BsLayoutSplit} mr="4px"/> Fields</Tab>
+                    <Tab><Icon as={BsLayoutSplit} mr="4px"/>Design</Tab>
                     <Tab><Icon as={AiOutlineSetting} mr="4px"/> Settings</Tab>
                 </TabList>
 
                 <TabPanels>
                     <TabPanel>
-                        <InlineThemes />
+                        <PopupStyle />
                     </TabPanel>
 
                     <TabPanel>
-                        <InlineChangeText />
+                        <PopupCallToAction />
+                    </TabPanel>
+                        
+                    <TabPanel>
+                        <PopupThemes />
                     </TabPanel>
 
                     <TabPanel>
-                        <InlineLookAndFeel />
+                       <PopupDesign />
                     </TabPanel>
 
                     <TabPanel>
-                        <InlineFeilds />
-                    </TabPanel>
-
-                    <TabPanel>
-                        <InlineSettings />
+                        <PopupSettings />
                     </TabPanel>
                 </TabPanels>
             </Tabs>

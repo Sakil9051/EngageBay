@@ -6,13 +6,14 @@ import DashNavbar from "./Components/DashNav";
 import Home from "./Pages/Home/Home.jsx";
 import VideoBackGround from "./Pages/Home/VideoBackGround";
 import Dashboard from "./Components/Dashboard";
-import { InlineFormContents } from "./Components/InlineFormContents";
+import { InlineForm } from "./Pages/InlineForm/InlineForm";
+import { PopupForm } from "./Pages/PopupForm/PopupForm";
+
 function App() {
   return (
     <div className="App">
 
-    
-
+   
       
 
     </div>
