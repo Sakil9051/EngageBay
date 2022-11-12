@@ -12,9 +12,8 @@ import { PopupForm } from "./Pages/PopupForm/PopupForm";
 function App() {
   return (
     <div className="App">
-
-   
-      
+  
+    
 
     </div>
   );

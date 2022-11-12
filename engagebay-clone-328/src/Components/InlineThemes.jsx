@@ -1,4 +1,4 @@
-import { Box, Center, Grid, GridItem, Icon, Image, Square, Stack, Text, transition } from "@chakra-ui/react"
+import { Box, Center, Grid, GridItem, Icon, Image, Stack, Text } from "@chakra-ui/react"
 import {BiEdit} from "react-icons/bi";
 
 const themesImages = [
