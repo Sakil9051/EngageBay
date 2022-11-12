@@ -1,78 +1,67 @@
 import React, { useState } from "react";
-import styles from "./Login.module.css";
+import styles from "./Resetpassword.module.css";
 import logo from "../Images/Engagebay_Logo.png";
-import { FcGoogle } from "react-icons/fc";
 import {
   FormControl,
   FormLabel,
   Input,
   Button,
   VStack,
-  Box,
   Alert,
   AlertIcon,
 } from "@chakra-ui/react";
 import { useUserAuth } from "../../Context/userAuthContext";
 import { useNavigate } from "react-router-dom";
-const Login = () => {
+
+
+
+
+
+const Resetpassword = () => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { logIn, googleSignin } = useUserAuth();
-
-  const navigate = useNavigate()
-
+  const { resetPassword } = useUserAuth();
   const handleSubmit = async () => {
     setError("");
     try {
-      await logIn(email, password);
-      alert("Login Successfull");
-      navigate("/dashboard");
+      await resetPassword(email);
+      alert("password sent");
     } catch (err) {
       setError(err.message);
     }
   };
 
-  const handleForgetpw = ()=>{
-    navigate('/forgetpassword')
-  }
+  
+  const navigate = useNavigate()
 
-  const handlesignup = ()=>{
+  const handlesignin =()=>{
+    navigate('/login')
+  }
+  const handlesignup =()=>{
     navigate('/signup')
   }
-
   const home = ()=>{
     navigate('/')
   }
-  
-  const handleGooleSignIn = async () => {
-    try {
-      await googleSignin();
-      alert("Login  Succesfully!");
-      // navigate to dash board
-      navigate("/dashboard");
-    } catch (err) {
-      setError(err.message);
-      alert("Log In With Google Failed");
-    }
-  };
   return (
     <div className={styles.main_Container}>
-      <div className={styles.login_Container}>
+      <div className={styles.reset_Container}>
         <div className={styles.main_Content}>
           <div className={styles.logo}>
             <img onClick={home} src={logo} alt="logo" width={250} />
           </div>
-          {/* <br/> */}
+
           <p
             style={{
-              fontSize: "38px",
+              fontSize: "28px",
               fontWeight: "normal",
-              marginTop: "10px",
+              marginTop: "20px",
             }}
           >
-            Login
+            Reset Password
           </p>
+          <br />
+          <br />
           {error && (
             <Alert status="error">
               <AlertIcon />
@@ -89,15 +78,6 @@ const Login = () => {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </FormControl>
-            <FormControl isRequired mb="10px">
-              <FormLabel>Password</FormLabel>
-              <Input
-                size="lg"
-                type="password"
-                focusBorderColor="blue.00"
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </FormControl>
           </VStack>
           <Button
             colorScheme="red"
@@ -106,38 +86,17 @@ const Login = () => {
             mt={2}
             onClick={handleSubmit}
           >
-            LOGIN
+            Reset Password
           </Button>
-          <div
-            border="1px solid blue"
-            style={{ display: "flex", boxSizing: "border-box", height: "60px" }}
-            onClick={handleGooleSignIn}
-          >
-            <Box
-              bg="white.600"
-              w="15%"
-              mt="10px"
-              border="1px solid blue"
-              p={2}
-              color="black"
-            >
-              <FcGoogle size="sm" />
-            </Box>
-            <Box bg="blue.600" w="85%" mt="10px" p={3.5} color="white">
-              SIGN IN WITH G SUIT
-            </Box>
-          </div>
           <div>
-            <p  style={{ marginTop: "17%", fontSize: "14px" }}>
-              Forgot <span onClick={handleForgetpw} style={{ cursor: "pointer" }}>Password</span>?
+            <p style={{ marginTop: "17%", fontSize: "14px" }}>
+              Already have an account ?{" "}
+              <span onClick={handlesignin} style={{ cursor: "pointer" }}>Sign In</span>
             </p>
             <p style={{ marginTop: "2%", fontSize: "14px" }}>
               {" "}
               Don't Have Any Account?{" "}
               <span onClick={handlesignup} style={{ cursor: "pointer" }}>Sign Up</span>
-            </p>
-            <p style={{ marginTop: "2%", fontSize: "14px", cursor: "pointer" }}>
-              Private Policy
             </p>
           </div>
         </div>
@@ -190,10 +149,10 @@ const Login = () => {
             </p>
           </div>
         </div>
-        <div className={styles.login_img}></div>
+        <div className={styles.reset_img}></div>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Resetpassword;

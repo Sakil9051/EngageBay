@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import {
   Box,
   Flex,
@@ -12,7 +13,7 @@ import {
   useDisclosure,
   Stack,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   ChevronDownIcon,
   SearchIcon,
@@ -26,9 +27,12 @@ import {
   MdPowerSettingsNew,
 } from "react-icons/md";
 import { AiFillSetting, AiOutlineGroup } from "react-icons/ai";
+import { useUserAuth } from "../Context/userAuthContext";
 
 function DashNavbar() {
   const [navColor, setnavColor] = useState("transparent");
+  const {logOut, user } = useUserAuth()
+  console.log(user)
   const listenScrollEvent = () => {
     window.scrollY > 15 ? setnavColor("#FFFFFF") : setnavColor("transparent");
   };
@@ -38,6 +42,32 @@ function DashNavbar() {
       window.removeEventListener("scroll", listenScrollEvent);
     };
   }, []);
+
+  const navigate = useNavigate()
+
+  const handleEmail =()=>{
+    navigate('/emailtemplate')
+  }
+  const handleVideo =()=>{
+    navigate('/videotemplate')
+  }
+
+  const inline = ()=>{
+    navigate ('/inlineform')
+  }
+  const popup = ()=>{
+    navigate ('/popupform')
+  }
+  const contact = ()=>{
+    navigate ('/contact')
+  }
+  const landingpage = ()=>{
+    navigate ('/landing')
+  }
+
+  const handleLogout =()=>{
+    return logOut()
+  }
 
   const {
     isOpen: isOpenMarketing,
@@ -119,11 +149,9 @@ function DashNavbar() {
               </MenuButton>
 
               <MenuList
-                // mt={"-9px"}
                 bgColor={"white"}
                 borderRadius={3}
                 zIndex={100}
-                // border={"1px solid #522a77"}
                 onMouseEnter={onOpenMarketing}
                 onMouseLeave={onCloseMarketing}
               >
@@ -168,7 +196,7 @@ function DashNavbar() {
                   onMouseEnter={onOpenContacts}
                   onMouseLeave={onCloseContacts}
                 >
-                  <MenuItem color={"black"} _hover={{ bgColor: "lightgrey" }}>
+                  <MenuItem color={"black"} onClick={contact} _hover={{ bgColor: "lightgrey" }}>
                     Contacts
                   </MenuItem>
                   <MenuItem color={"black"} _hover={{ bgColor: "lightgrey" }}>
@@ -201,10 +229,10 @@ function DashNavbar() {
                   onMouseEnter={onOpenForms}
                   onMouseLeave={onCloseForms}
                 >
-                  <MenuItem color={"black"} _hover={{ bgColor: "lightgrey" }}>
+                  <MenuItem onClick={inline} color={"black"} _hover={{ bgColor: "lightgrey" }}>
                     Inline Forms
                   </MenuItem>
-                  <MenuItem color={"black"} _hover={{ bgColor: "lightgrey" }}>
+                  <MenuItem onClick={popup} color={"black"} _hover={{ bgColor: "lightgrey" }}>
                     Popup Forms
                   </MenuItem>
                 </MenuList>
@@ -216,6 +244,7 @@ function DashNavbar() {
                 _hover={{ bgColor: "lightgrey", color: "blue" }}
                 color={"black"}
                 fontWeight={"500"}
+                onClick={landingpage}
               >
                 Landing Pages
               </Text>
@@ -245,10 +274,10 @@ function DashNavbar() {
                   onMouseEnter={onOpenTemplates}
                   onMouseLeave={onCloseTemplates}
                 >
-                  <MenuItem color={"black"} _hover={{ bgColor: "lightgrey" }}>
+                  <MenuItem onClick={handleEmail} color={"black"} _hover={{ bgColor: "lightgrey" }}>
                     Email Templates
                   </MenuItem>
-                  <MenuItem color={"black"} _hover={{ bgColor: "lightgrey" }}>
+                  <MenuItem onClick={handleVideo} color={"black"} _hover={{ bgColor: "lightgrey" }}>
                     Video Templates
                   </MenuItem>
                 </MenuList>
@@ -376,15 +405,16 @@ function DashNavbar() {
               <MenuList p={0}>
                 <MenuItem p={0}>
                   <Stack p={2} color={"black"}>
-                    <Text>Arpit</Text>
-                    <Text>username</Text>
+                    <Text>{user.displayName}</Text>
+                    <Text>{user.email}</Text>
+                    {/* <Text>username</Text> */}
                   </Stack>
                 </MenuItem>
                 <MenuItem icon={<MdOutlineShoppingCart />}> Billing</MenuItem>
                 <MenuItem icon={<AiFillSetting />}>Preferences</MenuItem>
                 <MenuItem icon={<AiOutlineGroup />}>Account Settings</MenuItem>
                 <MenuItem icon={<MdAttachMoney />}>Refer & Earn</MenuItem>
-                <MenuItem icon={<MdPowerSettingsNew />}>
+                <MenuItem onClick={handleLogout} icon={<MdPowerSettingsNew />}>
                   Logout
                 </MenuItem>
               </MenuList>
