@@ -1,17 +1,25 @@
 import React, { useState, useEffect } from "react";
-
+import "./DashNav.css";
 import {
   Box,
   Flex,
   Image,
   Menu,
   Text,
+  Hide,
   MenuButton,
   MenuList,
   MenuItem,
   Button,
   useDisclosure,
   Stack,
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton
 } from "@chakra-ui/react";
 import { Link, useNavigate } from "react-router-dom";
 import {
@@ -26,12 +34,31 @@ import {
   MdAttachMoney,
   MdPowerSettingsNew,
 } from "react-icons/md";
-import { AiFillSetting, AiOutlineGroup } from "react-icons/ai";
+import { AiFillSetting, AiOutlineGroup,AiOutlineContacts,AiOutlineFileAdd,AiOutlineMessage } from "react-icons/ai";
 import { useUserAuth } from "../Context/userAuthContext";
+
+
+import { GiHamburgerMenu } from "react-icons/gi";
+import { FaWpforms } from "react-icons/fa";
+import { RiPagesLine } from "react-icons/ri";
+import { CgTemplate } from "react-icons/cg";
+import { BsTrash } from "react-icons/bs";
+import { FiActivity } from "react-icons/fi";
+import { TbReportSearch} from "react-icons/tb";
+
+import { MdOutlineCampaign,MdSocialDistance,MdNotificationsActive,MdOutlineWeb,MdOutlineSms } from "react-icons/md";
+
+
+
+
+
+
 
 function DashNavbar() {
   const [navColor, setnavColor] = useState("transparent");
   const {logOut, user } = useUserAuth()
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const btnRef = React.useRef()
   console.log(user)
   const listenScrollEvent = () => {
     window.scrollY > 15 ? setnavColor("#FFFFFF") : setnavColor("transparent");
