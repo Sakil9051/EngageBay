@@ -1,0 +1,26 @@
+.Dashnav-menu{
+    display:flex;
+    justify-content:space-between;
+    justify-items: center;
+    align-items: center;
+}
+
+.dashnav-left{
+    width:"70vw";
+}
+.dashnav-right{
+    width:"30vw";
+}
+
+.dashmenu{
+    color: #ef6333;
+    width: 30px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px){
+    .Dashnav-menu{
+        display:none;
+    }
+}
