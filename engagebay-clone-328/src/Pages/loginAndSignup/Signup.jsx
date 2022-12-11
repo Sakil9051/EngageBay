@@ -136,7 +136,7 @@ const Signup = () => {
           <div
             border="1px solid blue"
             style={{ display: "flex", boxSizing: "border-box", height: "60px" }}
-            cursor= "pointer"
+             _hover={{cursor: "pointer"}}
           >
             <Box
               bg="white.600"
