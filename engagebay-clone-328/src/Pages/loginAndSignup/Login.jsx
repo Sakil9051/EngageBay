@@ -81,7 +81,7 @@ const Login = () => {
           )}
           <VStack>
             <FormControl isRequired>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>Email</FormLabel>
               <Input
                 type="email"
                 size="lg"
@@ -112,6 +112,7 @@ const Login = () => {
             border="1px solid blue"
             style={{ display: "flex", boxSizing: "border-box", height: "60px" }}
             onClick={handleGooleSignIn}
+             cursor: pointer
           >
             <Box
               bg="white.600"
