@@ -136,6 +136,7 @@ const Signup = () => {
           <div
             border="1px solid blue"
             style={{ display: "flex", boxSizing: "border-box", height: "60px" }}
+            cursor= "pointer"
           >
             <Box
               bg="white.600"
@@ -144,7 +145,6 @@ const Signup = () => {
               border="1px solid blue"
               p={2}
               color="black"
-              cursor: pointer
             >
               <FcGoogle size="sm" />
             </Box>
