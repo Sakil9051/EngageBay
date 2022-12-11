@@ -110,9 +110,8 @@ const Login = () => {
           </Button>
           <div
             border="1px solid blue"
-            style={{ display: "flex", boxSizing: "border-box", height: "60px" }}
+            style={{ display: "flex", boxSizing: "border-box", height: "60px",cursor: "pointer" }}
             onClick={handleGooleSignIn}
-            _hover={{cursor: "pointer"}}
           >
             <Box
               bg="white.600"
