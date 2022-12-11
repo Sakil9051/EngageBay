@@ -30,6 +30,10 @@ const Signup = () => {
   const home = ()=>{
     navigate('/')
   }
+  
+  const handalelogin = ()=>{
+    navigate('/login')
+  }
 
   const handleSubmit = async () => {
     // e.preventDefault();
@@ -155,8 +159,8 @@ const Signup = () => {
             </p>
             <p style={{ marginTop: "2%", fontSize: "14px" }}>
               {" "}
-              Don't Have Any Account?{" "}
-              <span style={{ cursor: "pointer" }}>Sign in</span>
+              Have Any Account?{" "}
+              <span style={{ cursor: "pointer" }} onClick={handalelogin}>Sign in</span>
             </p>
             <p style={{ marginTop: "2%", fontSize: "14px", cursor: "pointer" }}>
               Private Policy
