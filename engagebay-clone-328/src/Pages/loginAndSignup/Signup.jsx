@@ -135,8 +135,7 @@ const Signup = () => {
           </Button>
           <div
             border="1px solid blue"
-            style={{ display: "flex", boxSizing: "border-box", height: "60px" }}
-             _hover={{cursor: "pointer"}}
+            style={{ display: "flex", boxSizing: "border-box", height: "60px",cursor: "pointer" }}
           >
             <Box
               bg="white.600"
