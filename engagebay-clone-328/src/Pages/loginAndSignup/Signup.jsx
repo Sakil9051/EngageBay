@@ -91,7 +91,7 @@ const Signup = () => {
               />
             </FormControl>
             <FormControl isRequired>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>Email</FormLabel>
               <Input
                 type="email"
                 placeholder="Work Email"
@@ -140,6 +140,7 @@ const Signup = () => {
               border="1px solid blue"
               p={2}
               color="black"
+              cursor: pointer
             >
               <FcGoogle size="sm" />
             </Box>
@@ -155,7 +156,7 @@ const Signup = () => {
             <p style={{ marginTop: "2%", fontSize: "14px" }}>
               {" "}
               Don't Have Any Account?{" "}
-              <span style={{ cursor: "pointer" }}>Sign Up</span>
+              <span style={{ cursor: "pointer" }}>Sign in</span>
             </p>
             <p style={{ marginTop: "2%", fontSize: "14px", cursor: "pointer" }}>
               Private Policy
