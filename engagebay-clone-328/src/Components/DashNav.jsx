@@ -743,8 +743,9 @@ function DashNavbar() {
               <MenuButton aria-label="Options" variant="outline">
                 {" "}
                 <img
-                  width={"40px"}
-                  src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/img/avatar/user-avatar-v2.png"
+                  width="40px"
+                  style={{borderRadius:"50%"}}
+                  src={user.photoURL}
                   alt="user"
                 />
               </MenuButton>

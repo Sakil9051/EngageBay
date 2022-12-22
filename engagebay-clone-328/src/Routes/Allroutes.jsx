@@ -17,7 +17,7 @@ import {LandingPage } from "../Pages/LandingPage";
 const Allroutes = () => {
   return (
     <div>
-      <UserAuthContextProvider>
+      {/* <UserAuthContextProvider> */}
         <Routes> 
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -80,7 +80,7 @@ const Allroutes = () => {
             }
           />
         </Routes>
-      </UserAuthContextProvider>
+      {/* </UserAuthContextProvider> */}
     </div>
   );
 };
