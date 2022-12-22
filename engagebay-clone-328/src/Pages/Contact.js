@@ -1,8 +1,9 @@
-import { Box, Flex, Button, Image, Input, FormLabel, Select, VStack, TableContainer, Table, Thead, Tr, Checkbox,Th} from '@chakra-ui/react'
+import { Box, Flex, Button, Image, Input, FormLabel, Select, VStack,Stack ,Tab,TabList,TableContainer, Table, Thead, Tr, Checkbox,Th, Tabs} from '@chakra-ui/react'
 import React, { useState} from 'react'
 import {GrFormRefresh} from "react-icons/gr"
 import { ArrowDownIcon,CloseIcon} from '@chakra-ui/icons'
 import {TbTableImport} from "react-icons/tb"
+
 import "./coantact.css"
 import DashNavbar from '../Components/DashNav'
 
@@ -65,19 +66,6 @@ export const Contact=()=> {
     console.log(tabledata)
     toggleModal()
     }
-  // File upload
-
-
-
-
-
-
-  
-  // const styles = {
-  //   labelAsterisk: {
-  //     color: "red"
-  //   }
-  // };
   const [modal, setModal] = useState(false);
 
   const toggleModal = () => {
@@ -95,26 +83,37 @@ export const Contact=()=> {
   return (
     <>
     <DashNavbar/>
-    <Flex justifyContent="space-between"
-        alignItems={"center"}
-        py={4}
-        maxW="container.lg"
-        mx="auto" >
-        <Box>
+    <Box w="98%" m="auto" mt="4" borderRadius="25px" p="5" bgColor="white" bg="blue.200" >
+            <Tabs  variant="soft-rounded" colorScheme="telegram">
+                <TabList >
+                <Tab textAlign="left">
+            <h1>Contact{<ArrowDownIcon />}</h1>
+        </Tab>
+                    <Tab ml={{base:"100px",md:"200px", lg:"800px"}}>{<GrFormRefresh/>}</Tab>
+                 
+                    <Select ml="40px" mt="10px" w="8%" placeholder='Action'>
+                       <option>Country</option>
+                        <option>Name</option>
+                        <option>Last Name</option>
+                        <option>Email</option>
+                    </Select>
+                 
+                    <Tab m="10px">{<TbTableImport />}</Tab>
+                    <Tab m="10px">Filter {<ArrowDownIcon />}</Tab>
+                    <Tab m="10px" onClick={toggleModal}>Create New</Tab>
+                </TabList>
+                </Tabs>
+       </Box>
+
+   
+      <Stack w={{base:"100%", lg:"100%"}}  
+            borderRadius="10px"
+            p="20px"
+            spacing="2rem">
+        <Box textAlign="left">
             <h1>Contact{<ArrowDownIcon />}</h1>
         </Box>
-        <div>
-        <Button onClick="Reset()">{<GrFormRefresh/>}</Button>
-        <Button m="10px">{<TbTableImport />}</Button>
-        <Button m="10px">Filter {<ArrowDownIcon />}</Button>
-        <Button m="10px" onClick={toggleModal}>Create New</Button>
-        </div>
-    </Flex>
-
-
-
-
-
+        </Stack>
 
   <TableContainer>
     <Table><Thead>
@@ -142,13 +141,7 @@ export const Contact=()=> {
 }
       </Thead></Table>
   </TableContainer>
-
-
-
-
-
-
-    {modal && (
+     {modal && (
         <VStack className='modal1'  w={{ base: '100%', md: '30%', lg: '50%' }} ml={{ base: '24px', md: '300px', lg: '300px' }} borderRadius="2px">
           <form onSubmit={(e) => {handleSubmit(e)}}>
             <Flex justifyContent="space-between"><h1>Contact</h1>
