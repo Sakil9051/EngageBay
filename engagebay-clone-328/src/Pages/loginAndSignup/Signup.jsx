@@ -67,12 +67,7 @@ const Signup = () => {
             <img onClick={home} src={logo} alt="logo" width={250} />
           </div>
           {/* <br/> */}
-          <p
-            style={{
-              fontSize: "20px",
-              fontWeight: "100",
-            }}
-          >
+          <p className={styles.main_content_p}>
             Get Started For FREE
           </p>
           <br />
@@ -113,7 +108,7 @@ const Signup = () => {
                 focusBorderColor="blue.00"
               />
             </FormControl>
-            <FormControl mb="10px" isRequired>
+            <FormControl isRequired mb="10px">
               <FormLabel>Password</FormLabel>
               <Input
                 size="lg"
@@ -124,44 +119,32 @@ const Signup = () => {
               />
             </FormControl>
           </VStack>
-          <Button
+          <Button className={styles.container_signup_btn}
             colorScheme="red"
-            width="100%"
             size="lg"
-            mt={2}
             onClick={handleSubmit}
           >
             SIGNUP
           </Button>
-          <div
-            border="1px solid blue"
-            style={{ display: "flex", boxSizing: "border-box", height: "60px",cursor: "pointer" }}
-          >
-            <Box
-              bg="white.600"
-              w="15%"
-              mt="10px"
-              border="1px solid blue"
-              p={2}
-              color="black"
-            >
+          <div className={styles.container_google_div}>
+            <Box className={styles.container_google_icon}>
               <FcGoogle size="sm" />
             </Box>
-            <Box bg="blue.600" w="85%" mt="10px" p={3.5} color="white" onClick={handlegoogleSignup}>
+            <Box className={styles.container_google_title} onClick={handlegoogleSignup}>
               SIGN IN WITH G SUIT
             </Box>
           </div>
 
           <div>
-            <p style={{ marginTop: "10%", fontSize: "14px" }}>
+            <p className={styles.forget_pas_p}>
               Forgot <span onClick={handleForgetpw} style={{ cursor: "pointer" }}>Password</span>?
             </p>
-            <p style={{ marginTop: "2%", fontSize: "14px" }}>
+            <p className={styles.forget_pas_acc}>
               {" "}
               Have Any Account?{" "}
               <span style={{ cursor: "pointer" }} onClick={handalelogin}>Sign in</span>
             </p>
-            <p style={{ marginTop: "2%", fontSize: "14px", cursor: "pointer" }}>
+            <p className={styles.container_pri_pol}>
               Private Policy
             </p>
           </div>
@@ -170,34 +153,11 @@ const Signup = () => {
       <div className={styles.img_Container}>
         <div className={styles.row_desc}>
           <div className={styles.desc_avatar}>
-            <div
-              style={{
-                height: "60%",
-                width: "80%",
-                marginTop: "20%",
-                borderRadius: "50%",
-                backgroundColor: "#5F7EB7",
-                marginLeft: "10px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <div
-                style={{
-                  height: "85%",
-                  width: "85%",
-                  margin: "auto",
-                  borderRadius: "50%",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <img
+            <div className={styles.container_avatar_back}>
+              <div className={styles.container_img_back}>
+                <img className={styles.container_avatar_style}
                   src="https://cdn5.engagebay.com/img/testimonials/leonard.jpeg"
                   alt="avatar"
-                  style={{ width: "100%", borderRadius: "50%" }}
                 />
               </div>
             </div>

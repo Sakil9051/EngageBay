@@ -23,6 +23,80 @@ body{
     height: 70%;
     margin-top: -22%;
 }
+.main_content_p{
+    font-size: 20px;
+    font-weight: 100;
+    font-weight: normal;
+}
+.container_signup_btn{
+    width:100%;
+     margin-top: 10px;
+}
+.container_google_div{
+    display: flex;
+     box-sizing:border-box;
+    height:60px;
+     cursor: pointer
+}
+.container_google_icon{
+    background-color:azure ;
+    width: 15%;
+    margin-top: 10px;
+    border:1px solid blue;
+    padding: 10px;
+    color:black;
+}
+.container_google_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:blueviolet ;
+    width: 85%;
+    margin-top: 10px;
+    padding: 25px;
+    color:white;
+}
+.forget_pas_p
+{
+    margin-top: 10%;
+    font-size: 14px;
+}
+.forget_pas_acc
+{
+ margin-top: 2%;
+  font-size: 14px
+}
+.container_pri_pol{
+    margin-top: 2%;
+    font-size: 14px; 
+    cursor: pointer 
+}
+.container_avatar_back
+{
+    height: 60%;
+    width: 80%;
+    margin-top: 20%;
+    border-radius: 50%;
+    background-color: #5F7EB7;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.container_img_back
+{
+    height: 85%;
+    width: 85%;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container_avatar_style{
+    width: 100%;
+    border-radius: 50%;
+}
 .logo{
     width: fit-content;
     height: fit-content;

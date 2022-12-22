@@ -51,13 +51,7 @@ const Resetpassword = () => {
             <img onClick={home} src={logo} alt="logo" width={250} />
           </div>
 
-          <p
-            style={{
-              fontSize: "28px",
-              fontWeight: "normal",
-              marginTop: "20px",
-            }}
-          >
+          <p className={styles.main_content_p}>
             Reset Password
           </p>
           <br />
@@ -89,11 +83,11 @@ const Resetpassword = () => {
             Reset Password
           </Button>
           <div>
-            <p style={{ marginTop: "17%", fontSize: "14px" }}>
+            <p className={styles.container_acc}>
               Already have an account ?{" "}
               <span onClick={handlesignin} style={{ cursor: "pointer" }}>Sign In</span>
             </p>
-            <p style={{ marginTop: "2%", fontSize: "14px" }}>
+            <p className={styles.container_dont_acc}>
               {" "}
               Don't Have Any Account?{" "}
               <span onClick={handlesignup} style={{ cursor: "pointer" }}>Sign Up</span>
@@ -105,33 +99,17 @@ const Resetpassword = () => {
         <div className={styles.row_desc}>
           <div className={styles.desc_avatar}>
             <div
+            className={styles.container_avatar_back}
               style={{
-                height: "60%",
-                width: "80%",
-                marginTop: "20%",
-                borderRadius: "50%",
-                backgroundColor: "#5F7EB7",
-                marginLeft: "10px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
+                
               }}
             >
-              <div
-                style={{
-                  height: "85%",
-                  width: "85%",
-                  margin: "auto",
-                  borderRadius: "50%",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
+              <div className={styles.container_img_back}
               >
                 <img
                   src="https://cdn5.engagebay.com/img/testimonials/leonard.jpeg"
                   alt="avatar"
-                  style={{ width: "100%", borderRadius: "50%" }}
+                  className={styles.container_avatar_style}
                 />
               </div>
             </div>

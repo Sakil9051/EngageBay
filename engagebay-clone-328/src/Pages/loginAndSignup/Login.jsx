@@ -64,15 +64,7 @@ const Login = () => {
             <img onClick={home} src={logo} alt="logo" width={250} />
           </div>
           {/* <br/> */}
-          <p
-            style={{
-              fontSize: "38px",
-              fontWeight: "normal",
-              marginTop: "10px",
-            }}
-          >
-            Login
-          </p>
+          <p className={styles.main_content_p}>Login</p>
           {error && (
             <Alert status="error">
               <AlertIcon />
@@ -99,45 +91,35 @@ const Login = () => {
               />
             </FormControl>
           </VStack>
-          <Button
+          <Button className={styles.login_btn}
             colorScheme="red"
-            width="100%"
             size="lg"
-            mt={2}
             onClick={handleSubmit}
           >
             LOGIN
           </Button>
           <div
-            border="1px solid blue"
-            style={{ display: "flex", boxSizing: "border-box", height: "60px",cursor: "pointer" }}
-            onClick={handleGooleSignIn}
+          className={styles.container_google_div}
+          onClick={handleGooleSignIn}
           >
-            <Box
-              bg="white.600"
-              w="15%"
-              mt="10px"
-              border="1px solid blue"
-              p={2}
-              color="black"
-            >
+            <Box className={styles.container_google_box}>
               <FcGoogle size="sm" />
             </Box>
-            <Box bg="blue.600" w="85%" mt="10px" p={3.5} color="white">
+            <Box className={styles.container_google_title} >
               SIGN IN WITH G SUIT
             </Box>
           </div>
           <div>
-            <p  style={{ marginTop: "17%", fontSize: "14px" }}>
-              Forgot <span onClick={handleForgetpw} style={{ cursor: "pointer" }}>Password</span>?
+            <p  className={styles.forget_pas_p}>
+              Forgot <span onClick={handleForgetpw}>Password</span>?
             </p>
-            <p style={{ marginTop: "2%", fontSize: "14px" }}>
+            <p className={styles.forget_pas_text}>
               {" "}
               Don't Have Any Account?{" "}
               <span onClick={handlesignup} style={{ cursor: "pointer" }}>Sign Up</span>
             </p>
-            <p style={{ marginTop: "2%", fontSize: "14px", cursor: "pointer" }}>
-              Private Policy
+            <p className={styles.forget_pas_text} style={{cursor: "pointer" }}>
+              <a href="https://www.engagebay.com/legal/privacy-policy" target="_blank" rel="noreferrer">Private Policy</a>
             </p>
           </div>
         </div>
@@ -146,33 +128,12 @@ const Login = () => {
         <div className={styles.row_desc}>
           <div className={styles.desc_avatar}>
             <div
-              style={{
-                height: "60%",
-                width: "80%",
-                marginTop: "20%",
-                borderRadius: "50%",
-                backgroundColor: "#5F7EB7",
-                marginLeft: "10px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <div
-                style={{
-                  height: "85%",
-                  width: "85%",
-                  margin: "auto",
-                  borderRadius: "50%",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
+            className={styles.desc_avatar_back}>
+              <div className={styles.desc_img_back}>
                 <img
+                  className={styles.avatar_style}
                   src="https://cdn5.engagebay.com/img/testimonials/leonard.jpeg"
                   alt="avatar"
-                  style={{ width: "100%", borderRadius: "50%" }}
                 />
               </div>
             </div>
