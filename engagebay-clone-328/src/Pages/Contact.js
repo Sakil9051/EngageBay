@@ -89,7 +89,7 @@ export const Contact=()=> {
                 <Tab textAlign="left">
             <h1>Contact{<ArrowDownIcon />}</h1>
         </Tab>
-                    <Tab ml={{base:"100px",md:"200px", lg:"800px"}}>{<GrFormRefresh/>}</Tab>
+                    <Tab ml={{base:"50px",md:"100px", lg:"800px"}}>{<GrFormRefresh/>}</Tab>
                  
                     <Select ml="40px" mt="10px" w="8%" placeholder='Action'>
                        <option>Country</option>

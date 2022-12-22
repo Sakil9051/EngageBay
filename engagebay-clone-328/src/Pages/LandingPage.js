@@ -1,13 +1,55 @@
-import { Box, Flex, Button, Image,useDisclosure,Drawer,DrawerBody,DrawerContent,DrawerOverlay,DrawerHeader,AspectRatio} from '@chakra-ui/react'
+import { Box, Flex, Button, Image,useDisclosure,Drawer,DrawerBody,DrawerContent,Center,Icon,Stack,Text,GridItem,DrawerOverlay,DrawerHeader,AspectRatio} from '@chakra-ui/react'
 import React, { useState} from 'react'
 import { ArrowBackIcon} from '@chakra-ui/icons'
-import {BiBrush} from "react-icons/bi"
+import {BiBrush,BiEdit} from "react-icons/bi"
 import {BsCodeSlash} from "react-icons/bs"
 import { Grid } from '@chakra-ui/react'
 import DashNavbar from '../Components/DashNav'
 
 
 export const LandingPage = () => {
+  let img=[
+    {url:"https://img.freepik.com/free-psd/landing-page-template-design-newsletter_23-2148948010.jpg?w=2000"},
+    {url:"https://unbounce.com/photos/12-beautiful-landing-page-templates.jpg"},
+    {url:"https://themeforest.img.customer.envatousercontent.com/files/398139387/appco-preview.png?auto=compress%2Cformat&fit=crop&crop=top&w=590&h=300&s=c33277bb43692941d698c6abbcc23301"},
+    {url:"https://149842033.v2.pressablecdn.com/wp-content/uploads/2019/10/free-bootstrap-landing-page-templates-1000x750.jpg"},
+    {url:"https://www.abtasty.com/wp-content/uploads/boostrap-landing-page-template-coming-soon.png"},
+    {url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqBdi09XV3rsJ6aqJdS09CmGIsdzVLkPaocA&usqp=CAU"},
+    {url:"https://themefisher.com/blog/bootstrap-landing-page-templates.png"},
+    {url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT29l0usDbK6P5b8Y-GpQac3Wto1NSRL8NaYA&usqp=CAU"},
+    {url:"https://framerusercontent.com/images/YbKBkXvAJ0z6z1Z79XIi7LBVqAk.jpg"},
+    {url:"https://unbounce.com/photos/12-beautiful-landing-page-templates.jpg"},
+    {url:"https://assets-global.website-files.com/5b5729421aca332c60585f78/61ba503872080311dde1ea56_long-form-landing-page-examples.png"},
+    {url:"https://static.vecteezy.com/system/resources/thumbnails/007/388/098/small/home-landing-page-travel-nature-template-landing-business-page-digital-website-landing-page-design-concept-vector.jpg"},
+    {url:"https://img.freepik.com/free-psd/landing-page-template-design-newsletter_23-2148948010.jpg?w=2000"},
+    {url:"https://img.freepik.com/free-psd/landing-page-template-design-newsletter_23-2148948010.jpg?w=2000"},
+    {url:"https://unbounce.com/photos/12-beautiful-landing-page-templates.jpg"},
+    {url:"https://themeforest.img.customer.envatousercontent.com/files/398139387/appco-preview.png?auto=compress%2Cformat&fit=crop&crop=top&w=590&h=300&s=c33277bb43692941d698c6abbcc23301"},
+    {url:"https://149842033.v2.pressablecdn.com/wp-content/uploads/2019/10/free-bootstrap-landing-page-templates-1000x750.jpg"},
+    {url:"https://www.abtasty.com/wp-content/uploads/boostrap-landing-page-template-coming-soon.png"},
+    {url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqBdi09XV3rsJ6aqJdS09CmGIsdzVLkPaocA&usqp=CAU"},
+    {url:"https://themefisher.com/blog/bootstrap-landing-page-templates.png"},
+    {url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT29l0usDbK6P5b8Y-GpQac3Wto1NSRL8NaYA&usqp=CAU"},
+    {url:"https://framerusercontent.com/images/YbKBkXvAJ0z6z1Z79XIi7LBVqAk.jpg"},
+    {url:"https://unbounce.com/photos/12-beautiful-landing-page-templates.jpg"},
+    {url:"https://assets-global.website-files.com/5b5729421aca332c60585f78/61ba503872080311dde1ea56_long-form-landing-page-examples.png"},
+    {url:"https://static.vecteezy.com/system/resources/thumbnails/007/388/098/small/home-landing-page-travel-nature-template-landing-business-page-digital-website-landing-page-design-concept-vector.jpg"},
+    {url:"https://img.freepik.com/free-psd/landing-page-template-design-newsletter_23-2148948010.jpg?w=2000"},
+    {url:"https://img.freepik.com/free-psd/landing-page-template-design-newsletter_23-2148948010.jpg?w=2000"},
+    {url:"https://unbounce.com/photos/12-beautiful-landing-page-templates.jpg"},
+    {url:"https://themeforest.img.customer.envatousercontent.com/files/398139387/appco-preview.png?auto=compress%2Cformat&fit=crop&crop=top&w=590&h=300&s=c33277bb43692941d698c6abbcc23301"},
+    {url:"https://149842033.v2.pressablecdn.com/wp-content/uploads/2019/10/free-bootstrap-landing-page-templates-1000x750.jpg"},
+    {url:"https://www.abtasty.com/wp-content/uploads/boostrap-landing-page-template-coming-soon.png"},
+    {url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqBdi09XV3rsJ6aqJdS09CmGIsdzVLkPaocA&usqp=CAU"},
+    {url:"https://themefisher.com/blog/bootstrap-landing-page-templates.png"},
+    {url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT29l0usDbK6P5b8Y-GpQac3Wto1NSRL8NaYA&usqp=CAU"},
+    {url:"https://framerusercontent.com/images/YbKBkXvAJ0z6z1Z79XIi7LBVqAk.jpg"},
+    {url:"https://unbounce.com/photos/12-beautiful-landing-page-templates.jpg"},
+    {url:"https://assets-global.website-files.com/5b5729421aca332c60585f78/61ba503872080311dde1ea56_long-form-landing-page-examples.png"},
+    {url:"https://static.vecteezy.com/system/resources/thumbnails/007/388/098/small/home-landing-page-travel-nature-template-landing-business-page-digital-website-landing-page-design-concept-vector.jpg"},
+    {url:"https://img.freepik.com/free-psd/landing-page-template-design-newsletter_23-2148948010.jpg?w=2000"},
+   
+  ]
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [modal, setModal] = useState(false);
 
@@ -26,47 +68,54 @@ export const LandingPage = () => {
    <DashNavbar/>
     {modal &&(
         <>
-        <Flex mb="4px" >
+        <Flex mb="4px"  mt="10px">
         <Button justifyContent="start">{<ArrowBackIcon/>}</Button>
         </Flex>
-        <Box mr={{ base: '24px', md: '600px', lg: '800px' }}>Choose Templates</Box>
+        <Box mr={{ base: '24px', md: '600px', lg: '800px' }} align="left">Choose Templates</Box>
         <Flex w="80%">
             <Button bg="blue.100">{<BiBrush/>} Theme</Button>
             <Button ml="300px">{<BsCodeSlash/>} Code your own</Button>
         </Flex>
-        <Grid templateColumns={{lg :'repeat(6, 1fr)',md:"repeat(3,1fr)"}} gap={6} mt="10" mb="12000px">
-
-  <Image w='100%' h="200px" src="https://img.freepik.com/free-psd/landing-page-template-design-newsletter_23-2148948010.jpg?w=2000" />
-  <Image w='100%' h="200px"  src='https://unbounce.com/photos/12-beautiful-landing-page-templates.jpg' />
-  <Image w='100%' h="200px" src='https://themeforest.img.customer.envatousercontent.com/files/398139387/appco-preview.png?auto=compress%2Cformat&fit=crop&crop=top&w=590&h=300&s=c33277bb43692941d698c6abbcc23301'  />
-  <Image w='100%' h="200px"  src='https://149842033.v2.pressablecdn.com/wp-content/uploads/2019/10/free-bootstrap-landing-page-templates-1000x750.jpg' />
-  <Image w='100%' h="200px" src='https://www.abtasty.com/wp-content/uploads/boostrap-landing-page-template-coming-soon.png' />
-  <Image w='100%' h="200px"  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqBdi09XV3rsJ6aqJdS09CmGIsdzVLkPaocA&usqp=CAU'/>
-  <Image w='100%' h="200px"  src='https://onepagelove.imgix.net/2022/10/opl-master-5.jpg?w=540&max-h=540&fit=crop&fp-y=0&auto=compress'/>
-  <Image w='100%' h="200px" src='https://images.template.net/32960/News-App-Landingpage-Download-0.jpg'/>
-  <Image w='100%' h="200px" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl9I8b40DlxbHv9EMRr5-GdxN2s7kfJ0qrCF7z_j6Rh7CJX9hXJ8B9pL0aKvoxJgTAdcg&usqp=CAU'/>
-  <Image w='100%' h="200px"  src='https://themefisher.com/blog/bootstrap-landing-page-templates.png'/>
-  <Image w='100%' h="200px"  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT29l0usDbK6P5b8Y-GpQac3Wto1NSRL8NaYA&usqp=CAU'/>
-  <Image w='100%' h="200px" src='https://framerusercontent.com/images/YbKBkXvAJ0z6z1Z79XIi7LBVqAk.jpg'/>
-  <Image w='100%' h="200px"  src='https://unbounce.com/photos/12-beautiful-landing-page-templates.jpg'/>
-  <Image w='100%' h="200px" src='https://assets-global.website-files.com/5b5729421aca332c60585f78/61ba503872080311dde1ea56_long-form-landing-page-examples.png' />
-  <Image w='100%' h="200px"  src='https://static.vecteezy.com/system/resources/thumbnails/007/388/098/small/home-landing-page-travel-nature-template-landing-business-page-digital-website-landing-page-design-concept-vector.jpg'/>
-  <Image w='100%' h="200px" src="https://img.freepik.com/free-psd/landing-page-template-design-newsletter_23-2148948010.jpg?w=2000"/>
-  <Image w='100%' h="200px"  src='https://unbounce.com/photos/12-beautiful-landing-page-templates.jpg' />
-  <Image w='100%' h="200px" src='https://themeforest.img.customer.envatousercontent.com/files/398139387/appco-preview.png?auto=compress%2Cformat&fit=crop&crop=top&w=590&h=300&s=c33277bb43692941d698c6abbcc23301'  />
-  <Image w='100%' h="200px"  src='https://149842033.v2.pressablecdn.com/wp-content/uploads/2019/10/free-bootstrap-landing-page-templates-1000x750.jpg' />
-  <Image w='100%' h="200px" src='https://www.abtasty.com/wp-content/uploads/boostrap-landing-page-template-coming-soon.png' />
-  <Image w='100%' h="200px"  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqBdi09XV3rsJ6aqJdS09CmGIsdzVLkPaocA&usqp=CAU'/>
-  <Image w='100%' h="200px"  src='https://onepagelove.imgix.net/2022/10/opl-master-5.jpg?w=540&max-h=540&fit=crop&fp-y=0&auto=compress'/>
-  <Image w='100%' h="200px" src='https://images.template.net/32960/News-App-Landingpage-Download-0.jpg'/>
-  <Image w='100%' h="200px" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl9I8b40DlxbHv9EMRr5-GdxN2s7kfJ0qrCF7z_j6Rh7CJX9hXJ8B9pL0aKvoxJgTAdcg&usqp=CAU'/>
-  <Image w='100%' h="200px"  src='https://themefisher.com/blog/bootstrap-landing-page-templates.png'/>
-  <Image w='100%' h="200px"  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT29l0usDbK6P5b8Y-GpQac3Wto1NSRL8NaYA&usqp=CAU'/>
-  <Image w='100%' h="200px" src='https://framerusercontent.com/images/YbKBkXvAJ0z6z1Z79XIi7LBVqAk.jpg'/>
-  <Image w='100%' h="200px"  src='https://unbounce.com/photos/12-beautiful-landing-page-templates.jpg'/>
-  <Image w='100%' h="200px" src='https://assets-global.website-files.com/5b5729421aca332c60585f78/61ba503872080311dde1ea56_long-form-landing-page-examples.png' />
-  <Image w='100%' h="200px"  src='https://static.vecteezy.com/system/resources/thumbnails/007/388/098/small/home-landing-page-travel-nature-template-landing-business-page-digital-website-landing-page-design-concept-vector.jpg'/>
-</Grid>
+        <Box mt="20px">
+            <Grid
+            templateColumns={{base:"repeat(1, 1fr)", md:"repeat(2, 1fr)", lg:"repeat(4, 1fr)"}} 
+            gap="20px"
+            >
+                <GridItem  
+                boxShadow="2xl"
+                p="10px"
+                alignItems="center"
+                bgColor="blue.100"
+                borderRadius="20px"
+                cursor="pointer"
+               
+                >
+                    <Center h="100%">
+                    <Stack align="center" color="blue.400">
+                        <Icon fontSize="5xl" as={BiEdit} />
+                        <Text fontSize="lg">Blank Template</Text>
+                    </Stack>    
+                    </Center>
+                </GridItem>
+                {
+                    img.map((item, i)=>(
+                        <GridItem
+                        key={i}
+                         boxShadow="2xl"
+                         borderRadius="20px"
+                         p="10px"
+                         cursor="pointer"
+                         transition="padding 0.5s"
+                        _hover={{
+                            p:"0",
+                        }}
+                         >
+                            <Image w="100%" h="250px"  src={item.url} alt="Theme Image" />
+                        </GridItem>
+                    ))
+                }
+            </Grid>
+        </Box>
         
 
 
