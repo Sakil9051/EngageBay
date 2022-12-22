@@ -2,10 +2,9 @@ import { Box, Flex, Button, Image, Input, FormLabel, Select, VStack,Stack ,Tab,T
 import React, { useState} from 'react'
 import {GrFormRefresh} from "react-icons/gr"
 import { ArrowDownIcon,CloseIcon} from '@chakra-ui/icons'
-import {TbTableImport} from "react-icons/tb"
-
 import "./coantact.css"
 import DashNavbar from '../Components/DashNav'
+import EmailImport from './ImportCon'
 
 
 export const Contact=()=> {
@@ -89,16 +88,16 @@ export const Contact=()=> {
                 <Tab textAlign="left">
             <h1>Contact{<ArrowDownIcon />}</h1>
         </Tab>
-                    <Tab ml={{base:"50px",md:"100px", lg:"800px"}}>{<GrFormRefresh/>}</Tab>
+                    <Tab ml={{base:"50px",md:"100px", lg:"700px"}}>{<GrFormRefresh/>}</Tab>
                  
-                    <Select ml="40px" mt="10px" w="8%" placeholder='Action'>
+                    <Select ml="40px" mt="20px" w="8%" placeholder='Action'>
                        <option>Country</option>
                         <option>Name</option>
                         <option>Last Name</option>
                         <option>Email</option>
                     </Select>
                  
-                    <Tab m="10px">{<TbTableImport />}</Tab>
+                    <Tab m="10px" ><EmailImport/></Tab>
                     <Tab m="10px">Filter {<ArrowDownIcon />}</Tab>
                     <Tab m="10px" onClick={toggleModal}>Create New</Tab>
                 </TabList>
@@ -195,7 +194,7 @@ export const Contact=()=> {
         <Box>
           <h1>Contact</h1><br/>
           <p>Sorry, we could not find any results with the search criteria. Please change the search criteria and try again.</p>
-          <Button bg="rgb(47, 106, 217)" color={"white"}>Import</Button>
+          <Button bg="rgb(47, 106, 217)" color={"white"}>Import<EmailImport/></Button>
        <Button  ml="10px" onClick={toggleModal}>Create New</Button>
         </Box>
       </Flex>:null}
