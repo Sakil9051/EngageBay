@@ -9,18 +9,7 @@ const Vediotemplete = () => {
     <DashNavbar/>
       <div className={styles.main_Container}>Video</div>
       <div className={styles.inner_Container}>
-        <div
-          style={{
-            height: "50vh",
-            width: "96%",
-            borderRadius: "10px",
-            margin: "auto",
-            display: "flex",
-            backgroundColor: "white",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+        <div className={styles.inner_Container_Container}>
           <div
            className={styles.desc_div}
           >
@@ -36,8 +25,8 @@ const Vediotemplete = () => {
             <div
             className={styles.description}
             >
-              <p style={{ fontSize: "21px" ,fontWeight:"500" }}>Video Marketing</p>
-              <p style={{ marginTop: "15px",color:"1C2A00",padding:"0px 10%",fontSize:"14px", fontWeight:"300" ,textAlign:"justify" }}>
+              <p  className={styles.desc_title}>Video Marketing</p>
+              <p  className={styles.desc_desc_p}>
                 Record a video or upload existing videos, include them in your
                 broadcasts,<br/> sequences and automations to promote your product
                 more efficiently.
