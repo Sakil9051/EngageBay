@@ -46,6 +46,18 @@ body {
   height: 80%; 
   width: 35%;
 }
+.description_p{
+  font-size: 21px;
+  font-weight: 500
+}
+.description_desc{
+    margin-top: 15px;
+    color: 1C2A00;
+    font-size:14px;
+    font-weight: 300;
+    text-align: justify;
+  
+}
 .vedioOption{
   height: 50px;
   width: 75%;
@@ -81,6 +93,28 @@ body {
   }
   .vedioOption{
     display:none
+  }
+  .inner_Container_Container{
+    height: 50vh;
+    width: 96%;
+    border-radius:10px;
+    margin:auto;
+    display:flex;
+    background-color:white;
+    justify-content: center;
+    align-items: center;
+  }
+  .desc_title{
+    font-size: 21px;
+    font-weight:500
+  }
+  .desc_desc_p{
+    margin-top: 15px;
+    color:1C2A00;
+    padding:0px 10%;
+    font-size:14px;
+    font-weight:300;
+    text-align:justify 
   }
   .emailOption{
     display:none

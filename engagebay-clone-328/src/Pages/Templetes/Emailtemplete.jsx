@@ -1,8 +1,24 @@
 import { Button } from "@chakra-ui/react";
 import React from "react";
+import { useState } from "react";
 import DashNavbar from "../../Components/DashNav";
+import { InlineFormContents } from "../../Components/InlineFormContents";
 import styles from "../Templetes/Vedio.module.css";
 const Emailtemplete = () => {
+  const [show,setShow]=useState(false)
+  const handleEmailTemplete=()=>{
+    setShow(true);
+  }
+  const handleShowContents=()=>{
+    setShow(false);
+  }
+  
+    if(show===true)
+    {
+      return(
+        <InlineFormContents handleShow={handleShowContents} />
+      )
+    }
   return (
     <>
     <DashNavbar/>
@@ -29,19 +45,10 @@ const Emailtemplete = () => {
               />
             </div>
             <div className={styles.description}>
-              <p style={{ fontSize: "21px", fontWeight: "500" }}>
+              <p className={styles.description_p}>
                 Email Templetes
               </p>
-              <p
-                style={{
-                  marginTop: "15px",
-                  color: "1C2A00",
-                //   padding: "0px 10%",
-                  fontSize: "14px",
-                  fontWeight: "300",
-                  textAlign: "justify",
-                }}
-              >
+              <p className={styles.description_desc}>
                 Create beautiful, responsive, and high-converting email
                 templates in minutes without writing any code.
                 <br />
@@ -50,7 +57,7 @@ const Emailtemplete = () => {
                 emails throughout EngageBay.
               </p>
               <div className={styles.emailOption}>
-                <Button colorScheme="blue" color="white">
+                <Button colorScheme="blue" color="white" onClick={handleEmailTemplete}>
                   CREATE EMAIL TEMPLATE
                 </Button>
               </div>
