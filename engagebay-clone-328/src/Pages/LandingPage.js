@@ -1,10 +1,11 @@
-import { Box, Flex, Button, Image,useDisclosure,Drawer,DrawerBody,DrawerContent,Center,Icon,Stack,Text,GridItem,DrawerOverlay,DrawerHeader,AspectRatio} from '@chakra-ui/react'
+import { Box, Flex, Button, Image,useDisclosure,Drawer,DrawerBody,DrawerContent,Center,Icon,Stack,Text,GridItem,DrawerOverlay,DrawerHeader,AspectRatio, TabPanels,TabList, Tabs, Tab, TabPanel} from '@chakra-ui/react'
 import React, { useState} from 'react'
 import { ArrowBackIcon} from '@chakra-ui/icons'
 import {BiBrush,BiEdit} from "react-icons/bi"
 import {BsCodeSlash} from "react-icons/bs"
 import { Grid } from '@chakra-ui/react'
 import DashNavbar from '../Components/DashNav'
+import { CreateNew } from './Payments/Createnew'
 
 
 export const LandingPage = () => {
@@ -73,8 +74,18 @@ export const LandingPage = () => {
         </Flex>
         <Box mr={{ base: '24px', md: '600px', lg: '800px' }} align="left">Choose Templates</Box>
         <Flex w="80%">
-            <Button bg="blue.100">{<BiBrush/>} Theme</Button>
-            <Button ml="300px">{<BsCodeSlash/>} Code your own</Button>
+            <Tabs><TabList>
+              <Tab bg="blue.100">{<BiBrush/>} Theme</Tab>
+              <Tab  ml="300px">{<BsCodeSlash/>}Code your own</Tab></TabList>
+            <TabPanels>
+              <TabPanel>
+                <modal />
+              </TabPanel>
+              <TabPanel>
+                <CreateNew />
+              </TabPanel>
+            </TabPanels>
+            </Tabs>
         </Flex>
         <Box mt="20px">
             <Grid
