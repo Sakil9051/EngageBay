@@ -24,18 +24,7 @@ const Emailtemplete = () => {
     <DashNavbar/>
       <div className={styles.main_Container}>Email</div>
       <div className={styles.inner_Container}>
-        <div
-          style={{
-            height: "50vh",
-            width: "96%",
-            borderRadius: "10px",
-            margin: "auto",
-            display: "flex",
-            backgroundColor: "white",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+        <div className={styles.inner_Container_div}>
           <div className={styles.desc_div}>
             <div className={styles.Imgbox}>
               <img
