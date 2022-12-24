@@ -25,6 +25,16 @@ body {
   background-color: #f6fdfa;
   padding-top: 1%;
 }
+.inner_Container_div{
+  height: 50vh;
+  width: 96%;
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
 .desc_div {
   height: 43vh;
   width: 96%;
