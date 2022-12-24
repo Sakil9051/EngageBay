@@ -25,7 +25,7 @@
 
 </br>
 
-<img width="932" alt="a" src="https://drive.google.com/file/d/1REFC4K_Vn_4WwIn6qspwevehl0NRNEBA/view">
+<img width="932" alt="a" src="https://drive.google.com/file/d/1REFC4K_Vn_4WwIn6qspwevehl0NRNEBA.png">
 
 ![b](https://user-images.githubusercontent.com/105920094/208586761-69de583d-30c0-4b94-a3df-2fb1dc12fcc4.png)
 
