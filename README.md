@@ -1,6 +1,6 @@
 <h1>EngageBay CLONE APP as EngageBay</h1>
 </br>
-<p>GeekBuying is one of the leading E-commerce websites delivering a wide range of consumer technology across the globe. We are the one stop shop for many leading brands. At GeekBuying.com we strive to achieve the highest level of customer satisfaction possible.</p>
+<p>Award Winning All-in-One CRM Software for Marketing, Sales, & Customer Support. Experience the World's #1 All-in-One CRM Software. </p>
 
 </br>
 
