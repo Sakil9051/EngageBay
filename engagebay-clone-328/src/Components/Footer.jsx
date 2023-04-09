@@ -38,7 +38,7 @@ function Footer() {
     <Box
       w={"full"}
       bgImage={
-        "url('https://cdn5.engagebay.com/new/assets/img/footer_bg.jpeg')"
+        "url('https://cdn5.engagebay.com/assets/img/footer_bg.jpeg')"
       }
       bgRepeat={"repeat"}
       backgroundAttachment={"fixed"}
@@ -46,14 +46,14 @@ function Footer() {
     >
       <Image
         w={"full"}
-        src="https://cdn5.engagebay.com/new/assets/img/patterns/wave.svg"
+        src="https://cdn5.engagebay.com/assets/img/patterns/wave.svg"
       />
 
       <Box w={"full"}>
         <Box className="footer-top" w={"90%"} padding={"2rem"}>
           <Image
             w={"30%"}
-            src="https://cdn5.engagebay.com/new/assets/img/cta-img.svg"
+            src="https://cdn5.engagebay.com/assets/img/cta-img.svg"
           />
 
           <Box>
