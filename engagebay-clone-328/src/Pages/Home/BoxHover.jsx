@@ -6,123 +6,123 @@ import "aos/dist/aos.css";
 function BoxHover() {
   let Data = [
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/automation.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/automation.svg",
       "Automation",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/calling.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/calling.svg",
       "Calling",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/company-management.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/company-management.svg",
       "Company Management",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/contact-management.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/contact-management.svg",
       "Contact Management",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/deal-management.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/deal-management.svg",
       "Deal Management",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-broadcast.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/email-broadcast.svg",
       "Email Broadcast",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/email-sequences.svg",
       "Email Sequence",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-template-builder.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/email-template-builder.svg",
       "Email Template Builder",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/forms.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/forms.svg",
       "Forms",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/help-desk.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/help-desk.svg",
       "Help Desk",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/landing-pages.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/landing-pages.svg",
       "Landing Pages",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/live-chat.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/live-chat.svg",
       "Live Chat",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/milestone-tracking.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/milestone-tracking.svg",
       "Milestone Tracking",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/calendar.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/calendar.svg",
       "Calender",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/products.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/products.svg",
       "Products",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/proposal.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/proposal.svg",
       "Proposal",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/push-notifications.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/push-notifications.svg",
       "Push Notifications",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/segmentation.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/segmentation.svg",
       "Segmentation",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/site-messaging.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/site-messaging.svg",
       "Site Messaging",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/sms-broadcast.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/sms-broadcast.svg",
       "SMS Broadcast",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-posts-scheduling.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/social-posts-scheduling.svg",
       "Social Post Scheduling",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/social-suite.svg",
       "Social Suite",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/sticky-bars.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/sticky-bars.svg",
       "Sticky Bars",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/task-management.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/task-management.svg",
       "Task Management",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/team-management.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/team-management.svg",
       "Team Management",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/video-templates.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/video-templates.svg",
       "Video Templates",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/web-analytics.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/web-analytics.svg",
       "Web Analytics",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/ab-landing-pages.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/ab-landing-pages.svg",
       "A/B Landing Pages",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/custom-reporting.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/custom-reporting.svg",
       "Custom Reporting",
     ],
     [
-      "https://cdn5.engagebay.com/new/assets/img/icons/eb-features/workflows.svg",
+      "https://cdn5.engagebay.com/assets/img/icons/eb-features/workflows.svg",
       "Workflows",
     ],
   ];

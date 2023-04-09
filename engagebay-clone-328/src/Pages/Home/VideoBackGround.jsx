@@ -17,10 +17,12 @@ function VideoBackGround() {
       <Box w={"100%"} position={"relative"} h={"max-content"}>
         <video autoPlay muted loop id="landing-video">
           <source
-            src="https://cdn5.engagebay.com/new/assets/img/videos/bg-wave.mp4"
+            src="https://cdn5.engagebay.com/assets/img/videos/bg-wave.mp4"
             type="video/mp4"
           />
         </video>
+        
+        
         <Box
           w={"full"}
           h={"max-content"}
@@ -95,7 +97,7 @@ function VideoBackGround() {
             <Image
               mx={"auto"}
               boxSize="80%"
-              src="https://cdn5.engagebay.com/new/assets/img/banner-image.svg"
+              src="https://cdn5.engagebay.com/assets/img/banner-image.svg"
               alt="Dan Abramov"
             />
           </Box>
@@ -106,38 +108,38 @@ function VideoBackGround() {
         py={"60px"}
         paddingLeft={"5rem"}
         bgImage={
-         "url('https://cdn5.engagebay.com/new/assets/img/patterns/bg-with-dotted.svg')"
+         "url('https://cdn5.engagebay.com/assets/img/patterns/bg-with-dotted.svg')"
         }
         bgPosition={"center"}
         bgRepeat={"no-repeat"}
       >
         <Box className='Partners'>
           <Image
-            src="https://cdn5.engagebay.com/new/assets/img/p-logos/neilpatel.png"
+            src="https://cdn5.engagebay.com/assets/img/p-logos/neilpatel.png"
             alt="Engagebay Logo"
           />
           <Image
-            src="https://cdn5.engagebay.com/new/assets/img/p-logos/forbs.png"
+            src="https://cdn5.engagebay.com/assets/img/p-logos/forbs.png"
             alt="Engagebay Logo"
           />
           <Image
-            src="https://cdn5.engagebay.com/new/assets/img/p-logos/inc.png"
+            src="https://cdn5.engagebay.com/assets/img/p-logos/inc.png"
             alt="Engagebay Logo"
           />
           <Image
-            src="https://cdn5.engagebay.com/new/assets/img/p-logos/enterpreneur.png"
+            src="https://cdn5.engagebay.com/assets/img/p-logos/enterpreneur.png"
             alt="Engagebay Logo"
           />
           <Image
-            src="https://cdn5.engagebay.com/new/assets/img/p-logos/techcrunch.png"
+            src="https://cdn5.engagebay.com/assets/img/p-logos/techcrunch.png"
             alt="Engagebay Logo"
           />
           <Image
-            src="https://cdn5.engagebay.com/new/assets/img/p-logos/jeffbullas.png"
+            src="https://cdn5.engagebay.com/assets/img/p-logos/jeffbullas.png"
             alt="Engagebay Logo"
           />
           <Image
-            src="https://cdn5.engagebay.com/new/assets/img/p-logos/business.png"
+            src="https://cdn5.engagebay.com/assets/img/p-logos/business.png"
             alt="Engagebay Logo"
           />
         </Box>

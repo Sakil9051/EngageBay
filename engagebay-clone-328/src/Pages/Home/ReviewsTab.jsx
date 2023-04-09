@@ -20,7 +20,7 @@ function ReviewsTab() {
       <Box
         backgroundColor={"#2c4fbf"}
         bgImage={
-          "url('https://cdn5.engagebay.com/new/assets/img/patterns/action-shape-right.svg')"
+          "url('https://cdn5.engagebay.com/assets/img/patterns/action-shape-right.svg')"
         }
         bgPosition={"right"}
         bgRepeat={"no-repeat"}
@@ -40,52 +40,52 @@ function ReviewsTab() {
             <Flex w={"90%"} m={"auto"} justify={"space-around"} px={15}>
               <Image
                 w={"8vw"}
-                src="https://cdn5.engagebay.com/new/assets/img/Awards-2022/CRM_HighPerformer_AsiaPacific_HighPerformer.svg"
+                src="https://cdn5.engagebay.com/assets/img/g2-badges/badges-1.svg"
                 alt="Dan Abramov"
               />
               <Image
                 w={"8vw"}
-                src="https://cdn5.engagebay.com/new/assets/img/Awards-2022/CRM_HighPerformer_Europe_HighPerformer.svg"
+                src="https://cdn5.engagebay.com/assets/img/g2-badges/badges-1.svg"
                 alt="Dan Abramov"
               />
               <Image
                 w={"8vw"}
-                src="https://cdn5.engagebay.com/new/assets/img/Awards-2022/CRM_HighPerformer_HighPerformer.svg"
+                src="https://cdn5.engagebay.com/assets/img/g2-badges/badges-3.svg"
                 alt="Dan Abramov"
               />
               <Image
                 w={"8vw"}
-                src="https://cdn5.engagebay.com/new/assets/img/Awards-2022/CRM_HighPerformer_Small-Business_HighPerformer.svg"
+                src="https://cdn5.engagebay.com/assets/img/g2-badges/badges-4.svg"
                 alt="Dan Abramov"
               />
               <Image
                 w={"8vw"}
-                src="https://cdn5.engagebay.com/new/assets/img/Awards-2022/CRM_MomentumLeader_Leader.svg"
+                src="https://cdn5.engagebay.com/assets/img/g2-badges/badges-5.svg"
                 alt="Dan Abramov"
               />
               <Image
                 w={"8vw"}
-                src="https://cdn5.engagebay.com/new/assets/img/Awards-2022/EmailTracking_HighPerformer_HighPerformer.svg"
+                src="https://cdn5.engagebay.com/assets/img/g2-badges/badges-6.svg"
                 alt="Dan Abramov"
               />
               <Image
                 w={"8vw"}
-                src="https://cdn5.engagebay.com/new/assets/img/Awards-2022/EmailTracking_HighPerformer_Mid-Market_HighPerformer.svg"
+                src="https://cdn5.engagebay.com/assets/img/g2-badges/badges-7.svg"
                 alt="Dan Abramov"
               />
               <Image
                 w={"8vw"}
-                src="https://cdn5.engagebay.com/new/assets/img/Awards-2022/EmailTracking_HighPerformer_Small-Business_HighPerformer.svg"
+                src="https://cdn5.engagebay.com/assets/img/g2-badges/badges-8.svg"
                 alt="Dan Abramov"
               />
               <Image
                 w={"8vw"}
-                src="https://cdn5.engagebay.com/new/assets/img/Awards-2022/HelpDesk_EasiestAdmin_EaseOfAdmin.svg"
+                src="https://cdn5.engagebay.com/assets/img/g2-badges/badges-9.svg"
                 alt="Dan Abramov"
               />
               <Image
                 w={"8vw"}
-                src="https://cdn5.engagebay.com/new/assets/img/Awards-2022/OnlineFormBuilder_FastestImplementation_Small-Business_GoLiveTime.svg"
+                src="https://cdn5.engagebay.com/assets/img/g2-badges/badges-10.svg"
                 alt="Dan Abramov"
               />
             </Flex>

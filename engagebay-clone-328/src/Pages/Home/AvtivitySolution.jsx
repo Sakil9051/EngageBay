@@ -69,7 +69,7 @@ function AvtivitySolution() {
                     </GridItem>
                     <GridItem colSpan={1} rowSpan={3}>
                       <Image
-                        src="https://cdn5.engagebay.com/new/assets/img/icons/crm.svg"
+                        src="https://cdn5.engagebay.com/assets/img/icons/crm.svg"
                         alt="Engagebay Logo"
                       />
                     </GridItem>
@@ -156,7 +156,7 @@ function AvtivitySolution() {
                     </GridItem>
                     <GridItem colSpan={1} rowSpan={3}>
                       <Image
-                        src="https://cdn5.engagebay.com/new/assets/img/icons/marketing-automation.svg"
+                        src="https://cdn5.engagebay.com/assets/img/icons/marketing-automation.svg"
                         alt="Engagebay Logo"
                       />
                     </GridItem>
@@ -243,7 +243,7 @@ function AvtivitySolution() {
                     </GridItem>
                     <GridItem colSpan={1} rowSpan={3}>
                       <Image
-                        src="https://cdn5.engagebay.com/new/assets/img/icons/helpdesk.svg"
+                        src="https://cdn5.engagebay.com/assets/img/icons/helpdesk.svg"
                         alt="Engagebay Logo"
                       />
                     </GridItem>
@@ -329,7 +329,7 @@ function AvtivitySolution() {
                     </GridItem>
                     <GridItem colSpan={1} rowSpan={3}>
                       <Image
-                        src="https://cdn5.engagebay.com/new/assets/img/icons/livechat.svg"
+                        src="https://cdn5.engagebay.com/assets/img/icons/livechat.svg"
                         alt="Engagebay Logo"
                       />
                     </GridItem>

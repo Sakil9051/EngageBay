@@ -163,7 +163,7 @@ function CreateOwnViews() {
                   <Box position={"relative"}>
                     <video autoPlay muted loop id="tab-video">
                       <source
-                        src="https://cdn5.engagebay.com/new/assets/img/videos/bubble-1.mp4"
+                        src="https://cdn5.engagebay.com/assets/img/videos/bubble-1.mp4"
                         type="video/mp4"
                       />
                     </video>
@@ -178,7 +178,7 @@ function CreateOwnViews() {
                       <Image
                         w={"70%"}
                         mx={"auto"}
-                        src="https://cdn5.engagebay.com/new/assets/img/tabs/home/marketing_software.png"
+                        src="https://cdn5.engagebay.com/assets/img/tabs/home/marketing_software.png"
                         alt="Dan Abramov"
                       />
                     </Box>
@@ -271,7 +271,7 @@ function CreateOwnViews() {
                   <Box position={"relative"}>
                     <video autoPlay muted loop id="tab-video">
                       <source
-                        src="https://cdn5.engagebay.com/new/assets/img/videos/bubble-2.mp4"
+                        src="https://cdn5.engagebay.com/assets/img/videos/bubble-2.mp4"
                         type="video/mp4"
                       />
                     </video>
@@ -286,7 +286,7 @@ function CreateOwnViews() {
                       <Image
                         w={"70%"}
                         mx={"auto"}
-                        src="https://cdn5.engagebay.com/new/assets/img/tabs/home/free_crm_features.png"
+                        src="https://cdn5.engagebay.com/assets/img/tabs/home/free_crm_features.png"
                         alt="Dan Abramov"
                       />
                     </Box>
@@ -376,7 +376,7 @@ function CreateOwnViews() {
                   <Box position={"relative"}>
                     <video autoPlay muted loop id="tab-video">
                       <source
-                        src="https://cdn5.engagebay.com/new/assets/img/videos/bubble-3.mp4"
+                        src="https://cdn5.engagebay.com/assets/img/videos/bubble-3.mp4"
                         type="video/mp4"
                       />
                     </video>
@@ -391,7 +391,7 @@ function CreateOwnViews() {
                       <Image
                         w={"70%"}
                         mx={"auto"}
-                        src="https://cdn5.engagebay.com/new/assets/img/tabs/home/sales_software.png"
+                        src="https://cdn5.engagebay.com/assets/img/tabs/home/sales_software.png"
                         alt="Dan Abramov"
                       />
                     </Box>
@@ -485,7 +485,7 @@ function CreateOwnViews() {
                   <Box position={"relative"}>
                     <video autoPlay muted loop id="tab-video">
                       <source
-                        src="https://cdn5.engagebay.com/new/assets/img/videos/bubble-4.mp4"
+                        src="https://cdn5.engagebay.com/assets/img/videos/bubble-4.mp4"
                         type="video/mp4"
                       />
                     </video>
@@ -500,7 +500,7 @@ function CreateOwnViews() {
                       <Image
                         w={"70%"}
                         mx={"auto"}
-                        src="https://cdn5.engagebay.com/new/assets/img/tabs/home/helpdesk_software.png"
+                        src="https://cdn5.engagebay.com/assets/img/tabs/home/helpdesk_software.png"
                         alt="Dan Abramov"
                       />
                     </Box>
