@@ -38,7 +38,7 @@ function Footer() {
     <Box
       w={"full"}
       bgImage={
-        "url('https://cdn5.engagebay.com/assets/img/footer_bg.jpeg')"
+        "url('https://cdn5.engagebay.com/assets/img/footer_bg.webp')"
       }
       bgRepeat={"repeat"}
       backgroundAttachment={"fixed"}
