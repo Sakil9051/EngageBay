@@ -1,25 +1,22 @@
-<h1>EngageBay CLONE APP as EngageBay</h1>
-</br>
-<p>Award Winning All-in-One CRM Software for Marketing, Sales, & Customer Support. Experience the World's #1 All-in-One CRM Software. </p>
+# EngageBay (pharmeasy Clone App)
 
-</br>
+EngageBay Clone App is a sophisticated replica of PharmEasy, a leading e-commerce platform for medicines and health products. This project replicates the efficient online pharmacy operations of PharmEasy, providing a robust and responsive web application.
 
-<H2>Team EngageBay:</H2>
-</br>
-<p>Sahil Laskar    -https://github.com/Sakil9051 </p>
-<p>Priyanka Sahane   -https://github.com/er-priyanka</p>
-<p>Supriyo Samanta  -https://github.com/supriyosamanta1997</p>
-<p>Arpit kumar Sahu -https://github.com/arpitkumarsahu</p>
-<p>Raghvendra Singh    -https://github.com/raghavendra7992</p>
+## Award-Winning All-in-One CRM Software
+Experience the world's top CRM software for marketing, sales, and customer support, adapted for the pharmaceutical sector.
 
+## Team EngageBay
+- [Sahil Laskar](https://github.com/Sakil9051)
+- [Priyanka Sahane](https://github.com/er-priyanka)
+- [Supriyo Samanta](https://github.com/supriyosamanta1997)
+- [Arpit Kumar Sahu](https://github.com/arpitkumarsahu)
+- [Raghvendra Singh](https://github.com/raghavendra7992)
 
-<h2>TECH STACK :</h2>
-</br>
+## Tech Stack
+- **Frontend:** React, Chakra UI, CSS, JavaScript, React-DOM
+- **Backend:** Firebase
 
-<p>FRONTEND -> react,chakra ui,CSS,JavaScript,react-dom </p>
-<p>BACKEND -> FireBase</p>
-
-<p>our website is fully responsive for laptop , tablet , mobile </p>
+Our website is fully responsive, ensuring a seamless user experience on laptops, tablets, and mobile devices.
 
 <H2>Images of website :- </H2>
 
@@ -52,13 +49,8 @@
 ![f](https://user-images.githubusercontent.com/105920094/208587218-ce8c55bd-d61f-4af1-91d5-deea9f2ca743.png)
 
 
-<h2>Checkoutour website :</h2>
-
-</br>
-
-<p>Frontend:</p>
-<p>https://brawny-base-7995-6r5h.vercel.app/</p>
-
+## Visit Our Website
+Check out the live site: [EngageBay Clone Frontend](https://brawny-base-7995-6r5h.vercel.app/)
 
 
 
