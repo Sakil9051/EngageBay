@@ -1,9 +1,10 @@
-# EngageBay (pharmeasy Clone App)
+#EngageBay
 
-EngageBay Clone App is a sophisticated replica of PharmEasy, a leading e-commerce platform for medicines and health products. This project replicates the efficient online pharmacy operations of PharmEasy, providing a robust and responsive web application.
+**EngageBay Clone App** is an ambitious project designed to replicate the features and capabilities of EngageBay, the world-renowned all-in-one CRM software tailored for marketing, sales, and customer support. This clone demonstrates our technical proficiency in creating software solutions that are not only functional but also aesthetically pleasing and responsive across various devices.
 
-## Award-Winning All-in-One CRM Software
-Experience the world's top CRM software for marketing, sales, and customer support, adapted for the pharmaceutical sector.
+### Key Features:
+- **Comprehensive CRM functionality:** Combines tools for marketing, sales, and customer support into a single platform.
+- **Responsive design:** Fully optimized for desktops, tablets, and mobile devices to ensure a seamless user experience.
 
 ## Team EngageBay
 - [Sahil Laskar](https://github.com/Sakil9051)
@@ -50,7 +51,7 @@ Our website is fully responsive, ensuring a seamless user experience on laptops,
 
 
 ## Visit Our Website
-Check out the live site: [EngageBay (pharmeasy Clone App)](https://brawny-base-7995-6r5h.vercel.app/)
+Check out the live site: [EngageBay](https://brawny-base-7995-6r5h.vercel.app/)
 
 
 
