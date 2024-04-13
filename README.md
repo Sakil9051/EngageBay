@@ -1,6 +1,6 @@
 #EngageBay
 
-**EngageBay Clone App** is an ambitious project designed to replicate the features and capabilities of EngageBay, the world-renowned all-in-one CRM software tailored for marketing, sales, and customer support. This clone demonstrates our technical proficiency in creating software solutions that are not only functional but also aesthetically pleasing and responsive across various devices.
+**EngageBay ** is an ambitious project designed to replicate the features and capabilities of EngageBay, the world-renowned all-in-one CRM software tailored for marketing, sales, and customer support. This clone demonstrates our technical proficiency in creating software solutions that are not only functional but also aesthetically pleasing and responsive across various devices.
 
 ### Key Features:
 - **Comprehensive CRM functionality:** Combines tools for marketing, sales, and customer support into a single platform.
