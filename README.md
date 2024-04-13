@@ -50,7 +50,7 @@ Our website is fully responsive, ensuring a seamless user experience on laptops,
 
 
 ## Visit Our Website
-Check out the live site: [EngageBay Clone Frontend](https://brawny-base-7995-6r5h.vercel.app/)
+Check out the live site: [EngageBay (pharmeasy Clone App)](https://brawny-base-7995-6r5h.vercel.app/)
 
 
 
